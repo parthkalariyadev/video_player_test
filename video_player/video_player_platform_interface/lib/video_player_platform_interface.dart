@@ -128,6 +128,8 @@ class DataSource {
     this.asset,
     this.package,
     this.httpHeaders = const <String, String>{},
+    this.withCredentials = false,
+    this.drmDataSource,
   });
 
   /// The way in which the video was originally loaded.
@@ -151,12 +153,51 @@ class DataSource {
   /// Always empty for other video types.
   Map<String, String> httpHeaders;
 
+  /// **Web only**. Whether to send credentials such as cookies or authorization
+  /// headers for cross-site requests.
+  /// Only for [VideoPlayerController.network]
+  ///
+  /// Defaults to `false`.
+  final bool withCredentials;
+
   /// The name of the asset. Only set for [DataSourceType.asset] videos.
   final String? asset;
 
   /// The package that the asset was loaded from. Only set for
   /// [DataSourceType.asset] videos.
   final String? package;
+
+  /// The DRM protection description of the given video.
+  /// Only for [VideoPlayerController.network]
+  final DrmDataSource? drmDataSource;
+}
+
+/// Description of the data source used to request a license to use with
+/// the video player.
+class DrmDataSource {
+  /// Constructs an instance of [DrmDataSource].
+  ///
+  /// The [type] and the [uriLicense] are always required.
+  ///
+  /// The [uriLicense] argument takes the form of `'https://proxy.staging.widevine.com/proxy'`
+  DrmDataSource({
+    required this.type,
+    required this.uriLicense,
+    this.httpHeaders = const <String, String>{},
+  });
+
+  /// The DRM protection of the given video.
+  /// Only for [DataSourceType.network] videos.
+  final String type;
+
+  /// URL of the DRM protection for the acquisition of the license to play the video.
+  /// Only for [DataSourceType.network] videos.
+  final String uriLicense;
+
+  /// HTTP headers used for the request to the [uriLicense].
+  /// Only for [DataSourceType.network] videos.
+  /// Always empty for other video types.
+  Map<String, String> httpHeaders;
 }
 
 /// The way in which the video was originally loaded.
@@ -332,16 +373,12 @@ class DurationRange {
   }
 
   @override
-  String toString() =>
-      '${objectRuntimeType(this, 'DurationRange')}(start: $start, end: $end)';
+  String toString() => '${objectRuntimeType(this, 'DurationRange')}(start: $start, end: $end)';
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is DurationRange &&
-          runtimeType == other.runtimeType &&
-          start == other.start &&
-          end == other.end;
+      other is DurationRange && runtimeType == other.runtimeType && start == other.start && end == other.end;
 
   @override
   int get hashCode => Object.hash(start, end);
@@ -370,4 +407,13 @@ class VideoPlayerOptions {
   /// Note: This option will be silently ignored in the web platform (there is
   /// currently no way to implement this feature in this platform).
   final bool mixWithOthers;
+}
+
+/// The DRM protection of the given video.
+class VideoDrmType {
+  /// Widevine DRM type: https://en.wikipedia.org/wiki/Widevine
+  static const String widevine = 'widevine';
+
+  /// Fairplay DRM type: https://en.wikipedia.org/wiki/FairPlay
+  static const String fairplay = 'fairplay';
 }

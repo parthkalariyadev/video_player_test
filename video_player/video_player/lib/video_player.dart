@@ -14,7 +14,7 @@ import 'package:video_player_platform_interface/video_player_platform_interface.
 import 'src/closed_caption_file.dart';
 
 export 'package:video_player_platform_interface/video_player_platform_interface.dart'
-    show DurationRange, DataSourceType, VideoFormat, VideoPlayerOptions;
+    show DurationRange, DataSourceType, VideoFormat, VideoPlayerOptions, VideoDrmType;
 
 export 'src/closed_caption_file.dart';
 
@@ -54,15 +54,11 @@ class VideoPlayerValue {
   });
 
   /// Returns an instance for a video that hasn't been loaded.
-  VideoPlayerValue.uninitialized()
-      : this(duration: Duration.zero, isInitialized: false);
+  VideoPlayerValue.uninitialized() : this(duration: Duration.zero, isInitialized: false);
 
   /// Returns an instance with the given [errorDescription].
   VideoPlayerValue.erroneous(String errorDescription)
-      : this(
-            duration: Duration.zero,
-            isInitialized: false,
-            errorDescription: errorDescription);
+      : this(duration: Duration.zero, isInitialized: false, errorDescription: errorDescription);
 
   /// This constant is just to indicate that parameter is not passed to [copyWith]
   /// workaround for this issue https://github.com/dart-lang/language/issues/2009
@@ -172,9 +168,7 @@ class VideoPlayerValue {
       volume: volume ?? this.volume,
       playbackSpeed: playbackSpeed ?? this.playbackSpeed,
       rotationCorrection: rotationCorrection ?? this.rotationCorrection,
-      errorDescription: errorDescription != _defaultErrorDescription
-          ? errorDescription
-          : this.errorDescription,
+      errorDescription: errorDescription != _defaultErrorDescription ? errorDescription : this.errorDescription,
     );
   }
 
@@ -214,13 +208,15 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
   /// null. The [package] argument must be non-null when the asset comes from a
   /// package and null otherwise.
   VideoPlayerController.asset(this.dataSource,
-      {this.package,
-      Future<ClosedCaptionFile>? closedCaptionFile,
-      this.videoPlayerOptions})
+      {this.package, Future<ClosedCaptionFile>? closedCaptionFile, this.videoPlayerOptions})
       : _closedCaptionFileFuture = closedCaptionFile,
         dataSourceType = DataSourceType.asset,
         formatHint = null,
         httpHeaders = const <String, String>{},
+        drmType = null,
+        drmUriLicense = null,
+        drmHttpHeaders = const <String, String>{},
+        withCredentials = false,
         super(VideoPlayerValue(duration: Duration.zero));
 
   /// Constructs a [VideoPlayerController] playing a video from obtained from
@@ -238,6 +234,10 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     Future<ClosedCaptionFile>? closedCaptionFile,
     this.videoPlayerOptions,
     this.httpHeaders = const <String, String>{},
+    this.drmType,
+    this.drmUriLicense,
+    this.drmHttpHeaders = const <String, String>{},
+    this.withCredentials = false,
   })  : _closedCaptionFileFuture = closedCaptionFile,
         dataSourceType = DataSourceType.network,
         package = null,
@@ -247,14 +247,17 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
   ///
   /// This will load the file from the file-URI given by:
   /// `'file://${file.path}'`.
-  VideoPlayerController.file(File file,
-      {Future<ClosedCaptionFile>? closedCaptionFile, this.videoPlayerOptions})
+  VideoPlayerController.file(File file, {Future<ClosedCaptionFile>? closedCaptionFile, this.videoPlayerOptions})
       : _closedCaptionFileFuture = closedCaptionFile,
         dataSource = 'file://${file.path}',
         dataSourceType = DataSourceType.file,
         package = null,
         formatHint = null,
         httpHeaders = const <String, String>{},
+        drmType = null,
+        drmUriLicense = null,
+        drmHttpHeaders = const <String, String>{},
+        withCredentials = false,
         super(VideoPlayerValue(duration: Duration.zero));
 
   /// Constructs a [VideoPlayerController] playing a video from a contentUri.
@@ -271,6 +274,10 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         package = null,
         formatHint = null,
         httpHeaders = const <String, String>{},
+        drmType = null,
+        drmUriLicense = null,
+        drmHttpHeaders = const <String, String>{},
+        withCredentials = false,
         super(VideoPlayerValue(duration: Duration.zero));
 
   /// The URI to the video file. This will be in different formats depending on
@@ -296,6 +303,28 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
   /// Only set for [asset] videos. The package that the asset was loaded from.
   final String? package;
 
+  /// The DRM protection of the given video.
+  /// Only for [DataSourceType.network] videos.
+  final String? drmType;
+
+  /// URL of the DRM protection for the acquisition of the license to play the video.
+  /// Only for [DataSourceType.network] videos.
+  final String? drmUriLicense;
+
+  /// HTTP headers used for the request to the [drmUriLicense].
+  /// Only for [VideoPlayerController.network].
+  /// Always empty for other video types.
+  final Map<String, String> drmHttpHeaders;
+
+  /// **Web only**. Whether to send credentials such as cookies or authorization
+  /// headers for cross-site requests.
+  /// Only for [VideoPlayerController.network]
+  ///
+  /// Defaults to `false`.
+  final bool withCredentials;
+
+  bool get _hasDrm => drmType != null && drmUriLicense != null;
+
   Future<ClosedCaptionFile>? _closedCaptionFileFuture;
   ClosedCaptionFile? _closedCaptionFile;
   Timer? _timer;
@@ -316,8 +345,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
 
   /// Attempts to open the given [dataSource] and load metadata about the video.
   Future<void> initialize() async {
-    final bool allowBackgroundPlayback =
-        videoPlayerOptions?.allowBackgroundPlayback ?? false;
+    final bool allowBackgroundPlayback = videoPlayerOptions?.allowBackgroundPlayback ?? false;
     if (!allowBackgroundPlayback) {
       _lifeCycleObserver = _VideoAppLifeCycleObserver(this);
     }
@@ -339,6 +367,14 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
           uri: dataSource,
           formatHint: formatHint,
           httpHeaders: httpHeaders,
+          withCredentials: withCredentials,
+          drmDataSource: _hasDrm
+              ? DrmDataSource(
+                  type: drmType!,
+                  uriLicense: drmUriLicense!,
+                  httpHeaders: drmHttpHeaders,
+                )
+              : null,
         );
         break;
       case DataSourceType.file:
@@ -356,12 +392,10 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     }
 
     if (videoPlayerOptions?.mixWithOthers != null) {
-      await _videoPlayerPlatform
-          .setMixWithOthers(videoPlayerOptions!.mixWithOthers);
+      await _videoPlayerPlatform.setMixWithOthers(videoPlayerOptions!.mixWithOthers);
     }
 
-    _textureId = (await _videoPlayerPlatform.create(dataSourceDescription)) ??
-        kUninitializedTextureId;
+    _textureId = (await _videoPlayerPlatform.create(dataSourceDescription)) ?? kUninitializedTextureId;
     _creatingCompleter!.complete(null);
     final Completer<void> initializingCompleter = Completer<void>();
 
@@ -418,9 +452,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
       }
     }
 
-    _eventSubscription = _videoPlayerPlatform
-        .videoEventsFor(_textureId)
-        .listen(eventListener, onError: errorListener);
+    _eventSubscription = _videoPlayerPlatform.videoEventsFor(_textureId).listen(eventListener, onError: errorListener);
     return initializingCompleter.future;
   }
 
@@ -777,9 +809,7 @@ class _VideoPlayerState extends State<VideoPlayer> {
 }
 
 class _VideoPlayerWithRotation extends StatelessWidget {
-  const _VideoPlayerWithRotation(
-      {Key? key, required this.rotation, required this.child})
-      : super(key: key);
+  const _VideoPlayerWithRotation({Key? key, required this.rotation, required this.child}) : super(key: key);
   final int rotation;
   final Widget child;
 
@@ -862,7 +892,6 @@ class _VideoScrubberState extends State<_VideoScrubber> {
 
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
-      child: widget.child,
       onHorizontalDragStart: (DragStartDetails details) {
         if (!controller.value.isInitialized) {
           return;
@@ -879,8 +908,7 @@ class _VideoScrubberState extends State<_VideoScrubber> {
         seekToRelativePosition(details.globalPosition);
       },
       onHorizontalDragEnd: (DragEndDetails details) {
-        if (_controllerWasPlaying &&
-            controller.value.position != controller.value.duration) {
+        if (_controllerWasPlaying && controller.value.position != controller.value.duration) {
           controller.play();
         }
       },
@@ -890,6 +918,7 @@ class _VideoScrubberState extends State<_VideoScrubber> {
         }
         seekToRelativePosition(details.globalPosition);
       },
+      child: widget.child,
     );
   }
 }
