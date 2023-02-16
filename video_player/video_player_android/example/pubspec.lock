@@ -99,13 +99,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.1"
-  csslib:
-    dependency: transitive
-    description:
-      name: csslib
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.17.2"
   fake_async:
     dependency: transitive
     description:
@@ -142,11 +135,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_web_plugins:
-    dependency: transitive
-    description: flutter
-    source: sdk
-    version: "0.0.0"
   frontend_server_client:
     dependency: transitive
     description:
@@ -166,13 +154,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
-  html:
-    dependency: transitive
-    description:
-      name: html
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.15.1"
   http_multi_server:
     dependency: transitive
     description:
@@ -205,7 +186,7 @@ packages:
       name: js
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.3"
+    version: "0.6.5"
   logging:
     dependency: transitive
     description:
@@ -470,47 +451,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
-  video_player:
+  video_player_android:
     dependency: "direct main"
     description:
-      path: "video_player/video_player"
-      ref: HEAD
-      resolved-ref: c0ccb7a999f0622664c0c0efa679792d129e5826
-      url: "https://github.com/parthkalariyadev/video_player_test.git"
-    source: git
-    version: "2.4.4"
-  video_player_android:
-    dependency: "direct overridden"
-    description:
-      path: "video_player/video_player_android"
-      ref: HEAD
-      resolved-ref: "572251946fe720fb88fdce6b44f0f560673cef00"
-      url: "https://github.com/parthkalariyadev/video_player_test.git"
-    source: git
+      path: ".."
+      relative: true
+    source: path
     version: "2.3.6"
-  video_player_avfoundation:
-    dependency: transitive
-    description:
-      name: video_player_avfoundation
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.3.8"
   video_player_platform_interface:
-    dependency: "direct overridden"
+    dependency: "direct main"
     description:
-      path: "video_player/video_player_platform_interface"
-      ref: HEAD
-      resolved-ref: c0ccb7a999f0622664c0c0efa679792d129e5826
-      url: "https://github.com/parthkalariyadev/video_player_test.git"
-    source: git
-    version: "5.1.3"
-  video_player_web:
-    dependency: transitive
-    description:
-      name: video_player_web
+      name: video_player_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.13"
+    version: "5.1.4"
   vm_service:
     dependency: transitive
     description:
