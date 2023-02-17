@@ -470,6 +470,20 @@ public class Messages {
         return this;
       }
 
+      private @Nullable String drmUrl;
+
+      public @NonNull Builder setDrmUrl(@Nullable String setterArg) {
+        this.drmUrl = setterArg;
+        return this;
+      }
+
+      private @Nullable String drmType;
+
+      public @NonNull Builder setDrmType(@Nullable String setterArg) {
+        this.drmType = setterArg;
+        return this;
+      }
+
       private @Nullable String packageName;
 
       public @NonNull Builder setPackageName(@Nullable String setterArg) {
@@ -495,6 +509,8 @@ public class Messages {
         CreateMessage pigeonReturn = new CreateMessage();
         pigeonReturn.setAsset(asset);
         pigeonReturn.setUri(uri);
+        pigeonReturn.setDrmUrl(drmUrl);
+        pigeonReturn.setDrmType(drmType);
         pigeonReturn.setPackageName(packageName);
         pigeonReturn.setFormatHint(formatHint);
         pigeonReturn.setHttpHeaders(httpHeaders);
@@ -507,6 +523,8 @@ public class Messages {
       Map<String, Object> toMapResult = new HashMap<>();
       toMapResult.put("asset", asset);
       toMapResult.put("uri", uri);
+      toMapResult.put("drmUrl", drmUrl);
+      toMapResult.put("drmType", drmType);
       toMapResult.put("packageName", packageName);
       toMapResult.put("formatHint", formatHint);
       toMapResult.put("httpHeaders", httpHeaders);
@@ -519,6 +537,10 @@ public class Messages {
       pigeonResult.setAsset((String) asset);
       Object uri = map.get("uri");
       pigeonResult.setUri((String) uri);
+      Object drmUrl = map.get("drmUrl");
+      pigeonResult.setDrmUrl((String) drmUrl);
+      Object drmType = map.get("drmType");
+      pigeonResult.setDrmType((String) drmType);
       Object packageName = map.get("packageName");
       pigeonResult.setPackageName((String) packageName);
       Object formatHint = map.get("formatHint");
