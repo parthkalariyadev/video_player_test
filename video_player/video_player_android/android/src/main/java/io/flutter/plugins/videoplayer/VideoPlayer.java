@@ -160,11 +160,11 @@ final class VideoPlayer {
                 new DefaultDataSource.Factory(context, mediaDataSourceFactory))
             .createMediaSource(MediaItem.fromUri(uri));
       case C.TYPE_DASH:
-        /*return new DashMediaSource.Factory(
+        return new DashMediaSource.Factory(
                 new DefaultDashChunkSource.Factory(mediaDataSourceFactory),
                 new DefaultDataSource.Factory(context, mediaDataSourceFactory))
-            .createMediaSource(MediaItem.fromUri(uri));*/
-        return new DashMediaSource.Factory(
+            .createMediaSource(MediaItem.fromUri(uri));
+        /*return new DashMediaSource.Factory(
 
                 new DefaultDashChunkSource.Factory(mediaDataSourceFactory),
                 new DefaultDataSource.Factory(context, mediaDataSourceFactory))
@@ -177,7 +177,7 @@ final class VideoPlayer {
                         )
                         .setMimeType(MimeTypes.APPLICATION_MPD)
                         .setTag(null)
-                        .build());
+                        .build());*/
       case C.TYPE_HLS:
         return new HlsMediaSource.Factory(mediaDataSourceFactory)
             .createMediaSource(MediaItem.fromUri(uri));
