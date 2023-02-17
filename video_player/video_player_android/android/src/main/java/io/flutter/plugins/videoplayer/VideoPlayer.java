@@ -75,7 +75,7 @@ final class VideoPlayer {
 
     ExoPlayer exoPlayer = new ExoPlayer.Builder(context).build();
 
-    Uri uri = Uri.parse(dataSource);
+    Uri uri = Uri.parse(/*dataSource*/"https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4");
     Log.d("AAAAA", dataSource);
     DataSource.Factory dataSourceFactory;
 
