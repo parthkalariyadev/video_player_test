@@ -1,3 +1,11 @@
+video_player_android
+2.14
+file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-eaa14a599f2e2df6d83e842be6540cd2ab077e94/video_player/video_player_android/
+file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-eaa14a599f2e2df6d83e842be6540cd2ab077e94/video_player/video_player_android/lib/
+video_player_platform_interface
+2.12
+file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-eaa14a599f2e2df6d83e842be6540cd2ab077e94/video_player/video_player_platform_interface/
+file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-eaa14a599f2e2df6d83e842be6540cd2ab077e94/video_player/video_player_platform_interface/lib/
 async
 2.12
 file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.2/
@@ -118,12 +126,4 @@ video_player
 2.14
 file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/
 file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/lib/
-video_player_android
-2.14
-file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_android/
-file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_android/lib/
-video_player_platform_interface
-2.12
-file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_platform_interface/
-file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_platform_interface/lib/
 2
