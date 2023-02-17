@@ -98,7 +98,7 @@ final class VideoPlayer {
       dataSourceFactory = new DefaultDataSource.Factory(context);
     }
 
-    MediaSource mediaSource = buildMediaSource(uri, dataSourceFactory, formatHint, context);
+    MediaSource mediaSource = buildMediaSource(uri, dataSourceFactory, formatHint, context, drmURL, drmType);
 
     exoPlayer.setMediaSource(mediaSource);
     exoPlayer.prepare();
@@ -130,7 +130,7 @@ final class VideoPlayer {
   }
 
   private MediaSource buildMediaSource(
-      Uri uri, DataSource.Factory mediaDataSourceFactory, String formatHint, Context context) {
+      Uri uri, DataSource.Factory mediaDataSourceFactory, String formatHint, Context context, String drmURL, String drmType) {
     int type;
     if (formatHint == null) {
       type = Util.inferContentType(uri.getLastPathSegment());
@@ -160,11 +160,11 @@ final class VideoPlayer {
                 new DefaultDataSource.Factory(context, mediaDataSourceFactory))
             .createMediaSource(MediaItem.fromUri(uri));
       case C.TYPE_DASH:
-        return new DashMediaSource.Factory(
+        /*return new DashMediaSource.Factory(
                 new DefaultDashChunkSource.Factory(mediaDataSourceFactory),
                 new DefaultDataSource.Factory(context, mediaDataSourceFactory))
-            .createMediaSource(MediaItem.fromUri(uri));
-        /*return new DashMediaSource.Factory(
+            .createMediaSource(MediaItem.fromUri(uri));*/
+        return new DashMediaSource.Factory(
 
                 new DefaultDashChunkSource.Factory(mediaDataSourceFactory),
                 new DefaultDataSource.Factory(context, mediaDataSourceFactory))
@@ -172,12 +172,12 @@ final class VideoPlayer {
                         .setUri(uri)
                         // DRM Configuration
                         .setDrmConfiguration(
-                                new MediaItem.DrmConfiguration.Builder(drmSchemeUuid)
+                                new MediaItem.DrmConfiguration.Builder(drmType)
                                         .setLicenseUri(drmURL).build()
                         )
                         .setMimeType(MimeTypes.APPLICATION_MPD)
                         .setTag(null)
-                        .build());*/
+                        .build());
       case C.TYPE_HLS:
         return new HlsMediaSource.Factory(mediaDataSourceFactory)
             .createMediaSource(MediaItem.fromUri(uri));
