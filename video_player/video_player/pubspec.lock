@@ -185,10 +185,10 @@ packages:
   video_player_android:
     dependency: "direct main"
     description:
-      name: video_player_android
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.3.10"
+      path: "../video_player_android"
+      relative: true
+    source: path
+    version: "2.3.6"
   video_player_avfoundation:
     dependency: "direct main"
     description:

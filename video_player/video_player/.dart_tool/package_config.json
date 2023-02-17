@@ -165,7 +165,7 @@
     },
     {
       "name": "video_player_android",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_android-2.3.10",
+      "rootUri": "../../video_player_android",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -194,7 +194,7 @@
       "languageVersion": "2.14"
     }
   ],
-  "generated": "2023-02-17T04:16:19.677558Z",
+  "generated": "2023-02-17T04:33:34.571436Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
