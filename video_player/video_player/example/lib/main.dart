@@ -28,7 +28,7 @@ class _VideoAppState extends State<VideoApp> {
   void initState() {
     super.initState();
     _controller = VideoPlayerController.network(
-        'https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4')
+        'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4')
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});

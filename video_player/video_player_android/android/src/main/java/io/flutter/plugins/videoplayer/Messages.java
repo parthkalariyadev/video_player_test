@@ -399,6 +399,26 @@ public class Messages {
       this.uri = setterArg;
     }
 
+    private @Nullable String drmUrl;
+
+    public @Nullable String getDrmUrl() {
+      return drmUrl;
+    }
+
+    public void setDrmUrl(@Nullable String setterArg) {
+      this.drmUrl = setterArg;
+    }
+
+    private @Nullable String drmType;
+
+    public @Nullable String getDrmType() {
+      return drmType;
+    }
+
+    public void setDrmType(@Nullable String setterArg) {
+      this.drmType = setterArg;
+    }
+
     private @Nullable String packageName;
 
     public @Nullable String getPackageName() {

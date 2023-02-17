@@ -36,6 +36,8 @@ class AndroidVideoPlayer extends VideoPlayerPlatform {
     String? packageName;
     String? uri;
     String? formatHint;
+    String? drmUrl;
+    String? drmType;
     Map<String, String> httpHeaders = <String, String>{};
     switch (dataSource.sourceType) {
       case DataSourceType.asset:
@@ -46,6 +48,8 @@ class AndroidVideoPlayer extends VideoPlayerPlatform {
         uri = dataSource.uri;
         formatHint = _videoFormatStringMap[dataSource.formatHint];
         httpHeaders = dataSource.httpHeaders;
+        drmUrl = dataSource.drmUrl;
+        drmType = dataSource.drmType;
         break;
       case DataSourceType.file:
         uri = dataSource.uri;
@@ -58,6 +62,8 @@ class AndroidVideoPlayer extends VideoPlayerPlatform {
       asset: asset,
       packageName: packageName,
       uri: uri,
+      drmUrl: drmUrl,
+      drmType: drmType,
       httpHeaders: httpHeaders,
       formatHint: formatHint,
     );

@@ -40,6 +40,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import io.flutter.Log;
+import com.google.android.exoplayer2.util.MimeTypes;
 
 final class VideoPlayer {
   private static final String FORMAT_SS = "ss";
@@ -67,6 +68,8 @@ final class VideoPlayer {
       TextureRegistry.SurfaceTextureEntry textureEntry,
       String dataSource,
       String formatHint,
+      String drmURL,
+      String drmType,
       @NonNull Map<String, String> httpHeaders,
       VideoPlayerOptions options) {
     this.eventChannel = eventChannel;
@@ -77,6 +80,8 @@ final class VideoPlayer {
 
     Uri uri = Uri.parse(dataSource);
     Log.d("AAAAA", dataSource);
+    Log.d("AAAAA", drmURL);
+    Log.d("AAAAA", drmType);
     DataSource.Factory dataSourceFactory;
 
     if (isHTTP(uri)) {
@@ -155,10 +160,24 @@ final class VideoPlayer {
                 new DefaultDataSource.Factory(context, mediaDataSourceFactory))
             .createMediaSource(MediaItem.fromUri(uri));
       case C.TYPE_DASH:
-        return new DashMediaSource.Factory(
+        /*return new DashMediaSource.Factory(
                 new DefaultDashChunkSource.Factory(mediaDataSourceFactory),
                 new DefaultDataSource.Factory(context, mediaDataSourceFactory))
-            .createMediaSource(MediaItem.fromUri(uri));
+            .createMediaSource(MediaItem.fromUri(uri));*/
+        return new DashMediaSource.Factory(
+
+                new DefaultDashChunkSource.Factory(mediaDataSourceFactory),
+                new DefaultDataSource.Factory(context, mediaDataSourceFactory))
+                .createMediaSource( new MediaItem.Builder()
+                        .setUri(uri)
+                        // DRM Configuration
+                        .setDrmConfiguration(
+                                new MediaItem.DrmConfiguration.Builder(drmSchemeUuid)
+                                        .setLicenseUri(drmURL).build()
+                        )
+                        .setMimeType(MimeTypes.APPLICATION_MPD)
+                        .setTag(null)
+                        .build());
       case C.TYPE_HLS:
         return new HlsMediaSource.Factory(mediaDataSourceFactory)
             .createMediaSource(MediaItem.fromUri(uri));
