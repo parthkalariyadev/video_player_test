@@ -165,7 +165,7 @@
     },
     {
       "name": "video_player_android",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-a667e55506bd34b29701b269ddc1b7e5d9a33938/video_player/video_player_android",
+      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-f570e511545f1f78ee47aef43e387da242cefb0d/video_player/video_player_android",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -177,7 +177,7 @@
     },
     {
       "name": "video_player_platform_interface",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-a667e55506bd34b29701b269ddc1b7e5d9a33938/video_player/video_player_platform_interface",
+      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-f570e511545f1f78ee47aef43e387da242cefb0d/video_player/video_player_platform_interface",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -194,7 +194,7 @@
       "languageVersion": "2.14"
     }
   ],
-  "generated": "2023-02-17T05:44:05.434264Z",
+  "generated": "2023-02-17T06:00:41.718951Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
