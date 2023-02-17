@@ -74,7 +74,9 @@ final class VideoPlayer {
 
     ExoPlayer exoPlayer = new ExoPlayer.Builder(context).build();
 
-    Uri uri = Uri.parse(/*dataSource*/"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4");
+    Uri uri = Uri.parse(dataSource);
+    print("AAAAA");
+    print(dataSource);
     DataSource.Factory dataSourceFactory;
 
     if (isHTTP(uri)) {
