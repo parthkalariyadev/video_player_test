@@ -22,6 +22,13 @@ dependencies:
     sdk: flutter
   video_player_platform_interface: ^5.1.1
 
+dependency_overrides:
+  video_player_platform_interface:
+    git:
+      url: https://github.com/parthkalariyadev/video_player_test.git
+      path: video_player/video_player_platform_interface
+      ref: 635ae347e908c05a56a54f8aad2e6b403851037c
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

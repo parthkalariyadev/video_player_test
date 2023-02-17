@@ -48,8 +48,8 @@ class AndroidVideoPlayer extends VideoPlayerPlatform {
         uri = dataSource.uri;
         formatHint = _videoFormatStringMap[dataSource.formatHint];
         httpHeaders = dataSource.httpHeaders;
-        drmUrl = dataSource.drmUrl;
-        drmType = dataSource.drmType;
+        drmUrl = dataSource.drmDataSource?.uriLicense;
+        drmType = dataSource.drmDataSource?.type;
         break;
       case DataSourceType.file:
         uri = dataSource.uri;
