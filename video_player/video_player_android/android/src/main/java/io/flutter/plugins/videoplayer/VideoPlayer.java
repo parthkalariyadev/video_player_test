@@ -39,6 +39,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import io.flutter.Log;
 
 final class VideoPlayer {
   private static final String FORMAT_SS = "ss";
@@ -75,8 +76,7 @@ final class VideoPlayer {
     ExoPlayer exoPlayer = new ExoPlayer.Builder(context).build();
 
     Uri uri = Uri.parse(dataSource);
-    print("AAAAA");
-    print(dataSource);
+    Log.d("AAAAA", dataSource);
     DataSource.Factory dataSourceFactory;
 
     if (isHTTP(uri)) {
