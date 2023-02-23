@@ -165,11 +165,11 @@ final class VideoPlayer {
                 new DefaultDataSource.Factory(context, mediaDataSourceFactory))
                 .createMediaSource(
                         MediaItem.Builder()
-                                .setUri(Uri.parse(url))
+                                .setUri(uri)
                                 // DRM Configuration
                                 .setDrmConfiguration(
-                                        MediaItem.DrmConfiguration.Builder(drmSchemeUuid)
-                                                .setLicenseUri(drmLicenseUrl).build()
+                                        MediaItem.DrmConfiguration.Builder(C.WIDEVINE_UUID)
+                                                .setLicenseUri(drmURL).build()
                                 )
                                 .setMimeType(MimeTypes.APPLICATION_MPD)
                                 .setTag(null)
