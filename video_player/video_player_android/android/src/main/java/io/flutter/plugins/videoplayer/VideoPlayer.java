@@ -79,7 +79,7 @@ final class VideoPlayer {
     ExoPlayer exoPlayer = new ExoPlayer.Builder(context).build();
 
     Uri uri = Uri.parse(dataSource);
-    Log.d("AAAAA", dataSource);
+    Log.d("AAAAA 111", dataSource);
     Log.d("AAAAA", drmURL);
     Log.d("AAAAA", drmType);
     DataSource.Factory dataSourceFactory;
@@ -163,7 +163,19 @@ final class VideoPlayer {
         return new DashMediaSource.Factory(
                 new DefaultDashChunkSource.Factory(mediaDataSourceFactory),
                 new DefaultDataSource.Factory(context, mediaDataSourceFactory))
-            .createMediaSource(MediaItem.fromUri(uri));
+                .createMediaSource(
+                        MediaItem.Builder()
+                                .setUri(Uri.parse(url))
+                                // DRM Configuration
+                                .setDrmConfiguration(
+                                        MediaItem.DrmConfiguration.Builder(drmSchemeUuid)
+                                                .setLicenseUri(drmLicenseUrl).build()
+                                )
+                                .setMimeType(MimeTypes.APPLICATION_MPD)
+                                .setTag(null)
+                                .build()
+                );
+            /*.createMediaSource(MediaItem.fromUri(uri))*/;
         /*return new DashMediaSource.Factory(
 
                 new DefaultDashChunkSource.Factory(mediaDataSourceFactory),
