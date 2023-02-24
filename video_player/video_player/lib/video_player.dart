@@ -520,7 +520,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
 
     String proxyUrl = "$widevineProxy/$content_id";
     print("forTokenGeneration  proxyUrl:  " + proxyUrl);
-    var tokenLife = 30;
+    var tokenLife = 400;
     var expires = tokenLife + DateTime.now().millisecondsSinceEpoch;
 
     String stringforTokenGeneration =

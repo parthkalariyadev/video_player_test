@@ -28,7 +28,7 @@ class _VideoAppState extends State<VideoApp> {
   void initState() {
     super.initState();
     _controller = VideoPlayerController.network(
-      'https://video.gumlet.io/63be5807b03c5ea88609e4d6/63bfe56832156f9174527aa6/main.m3u8',
+      'https://video.gumlet.io/63be5807b03c5ea88609e4d6/63bfe56832156f9174527aa6/main.mpd',
       drmType: VideoDrmType.widevine,
       /*drmUriLicense:
           "https://widevine.gumlet.com/licence/63b67aa4fd4b762e422a8b3d/63bfe56832156f9174527aa6?expires=1677223615977&token=d545e9f0752784ab807552c86740709c83b654a5",*/
