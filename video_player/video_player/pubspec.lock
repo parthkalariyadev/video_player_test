@@ -200,8 +200,8 @@ packages:
     dependency: "direct main"
     description:
       path: "video_player/video_player_android"
-      ref: "4deb71ed4975cb016ba590cd0fe700910520d075"
-      resolved-ref: "4deb71ed4975cb016ba590cd0fe700910520d075"
+      ref: a8ee54a68ece474ec529ff80a1537a27363d283c
+      resolved-ref: a8ee54a68ece474ec529ff80a1537a27363d283c
       url: "https://github.com/parthkalariyadev/video_player_test.git"
     source: git
     version: "2.3.6"
@@ -216,8 +216,8 @@ packages:
     dependency: "direct main"
     description:
       path: "video_player/video_player_platform_interface"
-      ref: "4deb71ed4975cb016ba590cd0fe700910520d075"
-      resolved-ref: "4deb71ed4975cb016ba590cd0fe700910520d075"
+      ref: a8ee54a68ece474ec529ff80a1537a27363d283c
+      resolved-ref: a8ee54a68ece474ec529ff80a1537a27363d283c
       url: "https://github.com/parthkalariyadev/video_player_test.git"
     source: git
     version: "5.1.3"

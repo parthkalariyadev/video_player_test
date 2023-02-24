@@ -514,9 +514,13 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
 
   void generateDrmUriLicense(
       String licenseProxyURL, String proxyURLSigningSecret) {
-    String content_id = "63bfe56832156f9174527aa6";
+    List<String> splitPath = dataSource.split('/');
+    if (splitPath.isEmpty && splitPath.length < 2) {
+      return;
+    }
+    String contentId = splitPath[splitPath.length - 2];
 
-    String proxyUrl = "$licenseProxyURL/$content_id";
+    String proxyUrl = "$licenseProxyURL/$contentId";
     print("forTokenGeneration  proxyUrl:  " + proxyUrl);
     var tokenLife = 400;
     var expires = tokenLife + DateTime.now().millisecondsSinceEpoch;
