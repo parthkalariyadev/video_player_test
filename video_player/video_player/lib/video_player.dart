@@ -378,7 +378,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     if (drmType != null &&
         licenseProxyURL != null &&
         proxyURLSigningSecret != null) {
-      generateDrmUriLicense(licenseProxyURL, proxyURLSigningSecret);
+      generateDrmUriLicense(licenseProxyURL!, proxyURLSigningSecret!);
     }
     final bool allowBackgroundPlayback =
         videoPlayerOptions?.allowBackgroundPlayback ?? false;
