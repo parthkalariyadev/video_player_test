@@ -1,10 +1,10 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-503712df731ef035aa10be71c7931afa0b317fc9/video_player/video_player_android" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_web-2.0.13" />
       <root url="file://$PROJECT_DIR$" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_avfoundation-2.3.8" />
-      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-0b93f2f4c0e82c2df28282babf90e7c3df7aaa36/video_player/video_player_android" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

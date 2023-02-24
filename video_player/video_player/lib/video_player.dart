@@ -3,18 +3,29 @@
 // found in the LICENSE file.
 
 import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
 import 'dart:math' as math;
+import 'dart:typed_data';
 
+import 'package:convert/convert.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pointycastle/api.dart';
+import 'package:pointycastle/digests/sha1.dart';
+import 'package:pointycastle/macs/hmac.dart';
 import 'package:video_player_platform_interface/video_player_platform_interface.dart';
 
 import 'src/closed_caption_file.dart';
 
 export 'package:video_player_platform_interface/video_player_platform_interface.dart'
-    show DurationRange, DataSourceType, VideoFormat, VideoPlayerOptions, VideoDrmType;
+    show
+        DurationRange,
+        DataSourceType,
+        VideoFormat,
+        VideoPlayerOptions,
+        VideoDrmType;
 
 export 'src/closed_caption_file.dart';
 
@@ -54,11 +65,15 @@ class VideoPlayerValue {
   });
 
   /// Returns an instance for a video that hasn't been loaded.
-  VideoPlayerValue.uninitialized() : this(duration: Duration.zero, isInitialized: false);
+  VideoPlayerValue.uninitialized()
+      : this(duration: Duration.zero, isInitialized: false);
 
   /// Returns an instance with the given [errorDescription].
   VideoPlayerValue.erroneous(String errorDescription)
-      : this(duration: Duration.zero, isInitialized: false, errorDescription: errorDescription);
+      : this(
+            duration: Duration.zero,
+            isInitialized: false,
+            errorDescription: errorDescription);
 
   /// This constant is just to indicate that parameter is not passed to [copyWith]
   /// workaround for this issue https://github.com/dart-lang/language/issues/2009
@@ -168,7 +183,9 @@ class VideoPlayerValue {
       volume: volume ?? this.volume,
       playbackSpeed: playbackSpeed ?? this.playbackSpeed,
       rotationCorrection: rotationCorrection ?? this.rotationCorrection,
-      errorDescription: errorDescription != _defaultErrorDescription ? errorDescription : this.errorDescription,
+      errorDescription: errorDescription != _defaultErrorDescription
+          ? errorDescription
+          : this.errorDescription,
     );
   }
 
@@ -208,13 +225,17 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
   /// null. The [package] argument must be non-null when the asset comes from a
   /// package and null otherwise.
   VideoPlayerController.asset(this.dataSource,
-      {this.package, Future<ClosedCaptionFile>? closedCaptionFile, this.videoPlayerOptions})
+      {this.package,
+      Future<ClosedCaptionFile>? closedCaptionFile,
+      this.videoPlayerOptions})
       : _closedCaptionFileFuture = closedCaptionFile,
         dataSourceType = DataSourceType.asset,
         formatHint = null,
         httpHeaders = const <String, String>{},
         drmType = null,
-        drmUriLicense = null,
+        /*drmUriLicense = null,*/
+        licenseProxyURL = null,
+        proxyURLSigningSecret = null,
         drmHttpHeaders = const <String, String>{},
         withCredentials = false,
         super(VideoPlayerValue(duration: Duration.zero));
@@ -235,7 +256,9 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     this.videoPlayerOptions,
     this.httpHeaders = const <String, String>{},
     this.drmType,
-    this.drmUriLicense,
+    /*this.drmUriLicense,*/
+    this.licenseProxyURL,
+    this.proxyURLSigningSecret,
     this.drmHttpHeaders = const <String, String>{},
     this.withCredentials = false,
   })  : _closedCaptionFileFuture = closedCaptionFile,
@@ -247,7 +270,8 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
   ///
   /// This will load the file from the file-URI given by:
   /// `'file://${file.path}'`.
-  VideoPlayerController.file(File file, {Future<ClosedCaptionFile>? closedCaptionFile, this.videoPlayerOptions})
+  VideoPlayerController.file(File file,
+      {Future<ClosedCaptionFile>? closedCaptionFile, this.videoPlayerOptions})
       : _closedCaptionFileFuture = closedCaptionFile,
         dataSource = 'file://${file.path}',
         dataSourceType = DataSourceType.file,
@@ -255,7 +279,9 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         formatHint = null,
         httpHeaders = const <String, String>{},
         drmType = null,
-        drmUriLicense = null,
+        /*drmUriLicense = null,*/
+        licenseProxyURL = null,
+        proxyURLSigningSecret = null,
         drmHttpHeaders = const <String, String>{},
         withCredentials = false,
         super(VideoPlayerValue(duration: Duration.zero));
@@ -275,7 +301,9 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         formatHint = null,
         httpHeaders = const <String, String>{},
         drmType = null,
-        drmUriLicense = null,
+        /*drmUriLicense = null,*/
+        licenseProxyURL = null,
+        proxyURLSigningSecret = null,
         drmHttpHeaders = const <String, String>{},
         withCredentials = false,
         super(VideoPlayerValue(duration: Duration.zero));
@@ -309,7 +337,9 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
 
   /// URL of the DRM protection for the acquisition of the license to play the video.
   /// Only for [DataSourceType.network] videos.
-  final String? drmUriLicense;
+  String? drmUriLicense;
+  final String? licenseProxyURL;
+  final String? proxyURLSigningSecret;
 
   /// HTTP headers used for the request to the [drmUriLicense].
   /// Only for [VideoPlayerController.network].
@@ -345,7 +375,14 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
 
   /// Attempts to open the given [dataSource] and load metadata about the video.
   Future<void> initialize() async {
-    final bool allowBackgroundPlayback = videoPlayerOptions?.allowBackgroundPlayback ?? false;
+    if (drmType != null &&
+        licenseProxyURL != null &&
+        proxyURLSigningSecret != null) {
+      drmUriLicense = "";
+      aaa();
+    }
+    final bool allowBackgroundPlayback =
+        videoPlayerOptions?.allowBackgroundPlayback ?? false;
     if (!allowBackgroundPlayback) {
       _lifeCycleObserver = _VideoAppLifeCycleObserver(this);
     }
@@ -392,10 +429,12 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     }
 
     if (videoPlayerOptions?.mixWithOthers != null) {
-      await _videoPlayerPlatform.setMixWithOthers(videoPlayerOptions!.mixWithOthers);
+      await _videoPlayerPlatform
+          .setMixWithOthers(videoPlayerOptions!.mixWithOthers);
     }
 
-    _textureId = (await _videoPlayerPlatform.create(dataSourceDescription)) ?? kUninitializedTextureId;
+    _textureId = (await _videoPlayerPlatform.create(dataSourceDescription)) ??
+        kUninitializedTextureId;
     _creatingCompleter!.complete(null);
     final Completer<void> initializingCompleter = Completer<void>();
 
@@ -452,7 +491,9 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
       }
     }
 
-    _eventSubscription = _videoPlayerPlatform.videoEventsFor(_textureId).listen(eventListener, onError: errorListener);
+    _eventSubscription = _videoPlayerPlatform
+        .videoEventsFor(_textureId)
+        .listen(eventListener, onError: errorListener);
     return initializingCompleter.future;
   }
 
@@ -470,6 +511,35 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     }
     _isDisposed = true;
     super.dispose();
+  }
+
+  void aaa() {
+    String widevineProxy =
+        "https://widevine.gumlet.com/licence/63bfdecc13de5691688e9f3e";
+    String content_id = "63bfe3a8c35dfc440754ebf6";
+    String proxySecret = 'd5b98024815fd1e2f5ee38b71f47dae8';
+
+    String proxyUrl = "$widevineProxy/$content_id";
+    print("forTokenGeneration  proxyUrl:  " + proxyUrl);
+    var tokenLife = 30;
+    var expires = tokenLife + DateTime.now().millisecondsSinceEpoch;
+
+    String stringforTokenGeneration =
+        "${proxyUrl.substring(35, proxyUrl.length)}?expires=$expires";
+
+    final hmac = HMac(SHA1Digest(), 64)
+      ..init(KeyParameter(base64.decode(proxySecret)));
+    final sigBytes =
+        hmac.process(utf8.encode(stringforTokenGeneration) as Uint8List);
+    final signature = hex.encode(sigBytes);
+
+    print(signature);
+
+    // _hmac();
+    var url = "$proxyUrl?expires=$expires&token=$signature";
+    //_counter = " $url";
+    print("HMAC digest as bytes: ${signature}");
+    print("HMAC digest as hex string: $url");
   }
 
   /// Starts playing the video.
@@ -809,7 +879,9 @@ class _VideoPlayerState extends State<VideoPlayer> {
 }
 
 class _VideoPlayerWithRotation extends StatelessWidget {
-  const _VideoPlayerWithRotation({Key? key, required this.rotation, required this.child}) : super(key: key);
+  const _VideoPlayerWithRotation(
+      {Key? key, required this.rotation, required this.child})
+      : super(key: key);
   final int rotation;
   final Widget child;
 
@@ -908,7 +980,8 @@ class _VideoScrubberState extends State<_VideoScrubber> {
         seekToRelativePosition(details.globalPosition);
       },
       onHorizontalDragEnd: (DragEndDetails details) {
-        if (_controllerWasPlaying && controller.value.position != controller.value.duration) {
+        if (_controllerWasPlaying &&
+            controller.value.position != controller.value.duration) {
           controller.play();
         }
       },

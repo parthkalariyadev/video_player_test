@@ -38,6 +38,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "convert",
+      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/convert-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "csslib",
       "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/csslib-0.17.2",
       "packageUri": "lib/",
@@ -110,6 +116,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "pointycastle",
+      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/pointycastle-3.6.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -165,7 +177,7 @@
     },
     {
       "name": "video_player_android",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-0b93f2f4c0e82c2df28282babf90e7c3df7aaa36/video_player/video_player_android",
+      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-503712df731ef035aa10be71c7931afa0b317fc9/video_player/video_player_android",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -177,7 +189,7 @@
     },
     {
       "name": "video_player_platform_interface",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-0b93f2f4c0e82c2df28282babf90e7c3df7aaa36/video_player/video_player_platform_interface",
+      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-503712df731ef035aa10be71c7931afa0b317fc9/video_player/video_player_platform_interface",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -194,7 +206,7 @@
       "languageVersion": "2.14"
     }
   ],
-  "generated": "2023-02-24T06:54:28.387830Z",
+  "generated": "2023-02-24T08:07:57.397253Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
