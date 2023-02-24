@@ -66,10 +66,6 @@ final class VideoPlayer {
 
   private final VideoPlayerOptions options;
 
-  private static final String URL = "https://bitmovin-a.akamaihd.net/content/art-of-motion_drm/mpds/11331.mpd";
-  private static final String DRM_LICENSE_URL = "https://proxy.uat.widevine.com/proxy?provider=widevine_test";
-  private static final UUID drmSchemeUuid = C.WIDEVINE_UUID; // DRM Type
-
   VideoPlayer(
       Context context,
       EventChannel eventChannel,
@@ -173,11 +169,11 @@ final class VideoPlayer {
                 new DefaultDataSource.Factory(context, mediaDataSourceFactory))
                 .createMediaSource(
                       new MediaItem.Builder()
-                              .setUri(Uri.parse(URL))
+                              .setUri(uri)
                               // DRM Configuration
                               .setDrmConfiguration(
-                                      new MediaItem.DrmConfiguration.Builder(drmSchemeUuid)
-                                              .setLicenseUri(DRM_LICENSE_URL).build()
+                                      new MediaItem.DrmConfiguration.Builder(C.WIDEVINE_UUID)
+                                              .setLicenseUri(drmURL).build()
                               )
                               .setMimeType(MimeTypes.APPLICATION_MPD)
                               .setTag(null)
