@@ -12,7 +12,7 @@ import 'package:convert/convert.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pointycastle/api.dart';
+import 'package:pointycastle/api.dart' as pointycastleapi;
 import 'package:pointycastle/digests/sha1.dart';
 import 'package:pointycastle/macs/hmac.dart';
 import 'package:video_player_platform_interface/video_player_platform_interface.dart';
@@ -528,7 +528,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         "${proxyUrl.substring(35, proxyUrl.length)}?expires=$expires";
 
     final hmac = HMac(SHA1Digest(), 64)
-      ..init(KeyParameter(base64.decode(proxySecret)));
+      ..init(pointycastleapi.KeyParameter(base64.decode(proxySecret)));
     final sigBytes =
         hmac.process(utf8.encode(stringforTokenGeneration) as Uint8List);
     final signature = hex.encode(sigBytes);
