@@ -183,21 +183,6 @@ final class VideoPlayer {
                               .setTag(null)
                               .build()
                 );
-            /*.createMediaSource(MediaItem.fromUri(uri))*/;
-        /*return new DashMediaSource.Factory(
-
-                new DefaultDashChunkSource.Factory(mediaDataSourceFactory),
-                new DefaultDataSource.Factory(context, mediaDataSourceFactory))
-                .createMediaSource( new MediaItem.Builder()
-                        .setUri(uri)
-                        // DRM Configuration
-                        .setDrmConfiguration(
-                                new MediaItem.DrmConfiguration.Builder(drmType)
-                                        .setLicenseUri(drmURL).build()
-                        )
-                        .setMimeType(MimeTypes.APPLICATION_MPD)
-                        .setTag(null)
-                        .build());*/
       case C.TYPE_HLS:
         return new HlsMediaSource.Factory(mediaDataSourceFactory)
             .createMediaSource(MediaItem.fromUri(uri));
