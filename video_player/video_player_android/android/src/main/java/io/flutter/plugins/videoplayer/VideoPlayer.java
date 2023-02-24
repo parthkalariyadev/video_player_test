@@ -180,9 +180,6 @@ final class VideoPlayer {
                               .build()
                 );
       case C.TYPE_HLS:
-        /*return new HlsMediaSource.Factory(mediaDataSourceFactory)
-            .createMediaSource(MediaItem.fromUri(uri));*/
-        Log.d("AAAAA 111", "TYPE_HLS");
         return new HlsMediaSource.Factory(mediaDataSourceFactory)
                 .createMediaSource(new MediaItem.Builder()
                         .setUri(uri)
