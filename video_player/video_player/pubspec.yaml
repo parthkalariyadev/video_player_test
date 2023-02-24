@@ -33,13 +33,13 @@ dependency_overrides:
     git:
       url: https://github.com/parthkalariyadev/video_player_test.git
       path: video_player/video_player_platform_interface
-      ref: 21cd294e990c8bd76155ca6f7cc7ea8671c0dc74
+      ref: d4c0c61497f84de45c7ad7ee18c24b441e1a152d
 
   video_player_android:
     git:
       url: https://github.com/parthkalariyadev/video_player_test.git
       path: video_player/video_player_android
-      ref: 21cd294e990c8bd76155ca6f7cc7ea8671c0dc74
+      ref: d4c0c61497f84de45c7ad7ee18c24b441e1a152d
 
 dev_dependencies:
   flutter_test:

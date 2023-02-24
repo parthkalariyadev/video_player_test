@@ -41,6 +41,8 @@ import java.util.List;
 import java.util.Map;
 import io.flutter.Log;
 import com.google.android.exoplayer2.util.MimeTypes;
+import com.google.android.exoplayer2.source.dash.DashChunkSource;
+import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
 
 final class VideoPlayer {
   private static final String FORMAT_SS = "ss";

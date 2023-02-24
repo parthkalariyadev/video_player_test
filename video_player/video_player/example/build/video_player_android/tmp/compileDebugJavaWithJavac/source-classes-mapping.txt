@@ -3,3 +3,22 @@ io/flutter/plugins/videoplayer/VideoPlayerPlugin.java
  io.flutter.plugins.videoplayer.VideoPlayerPlugin$FlutterState
  io.flutter.plugins.videoplayer.VideoPlayerPlugin$KeyForAssetAndPackageName
  io.flutter.plugins.videoplayer.VideoPlayerPlugin$KeyForAssetFn
+io/flutter/plugins/videoplayer/Messages.java
+ io.flutter.plugins.videoplayer.Messages
+ io.flutter.plugins.videoplayer.Messages$1
+ io.flutter.plugins.videoplayer.Messages$AndroidVideoPlayerApi
+ io.flutter.plugins.videoplayer.Messages$AndroidVideoPlayerApiCodec
+ io.flutter.plugins.videoplayer.Messages$CreateMessage
+ io.flutter.plugins.videoplayer.Messages$CreateMessage$Builder
+ io.flutter.plugins.videoplayer.Messages$LoopingMessage
+ io.flutter.plugins.videoplayer.Messages$LoopingMessage$Builder
+ io.flutter.plugins.videoplayer.Messages$MixWithOthersMessage
+ io.flutter.plugins.videoplayer.Messages$MixWithOthersMessage$Builder
+ io.flutter.plugins.videoplayer.Messages$PlaybackSpeedMessage
+ io.flutter.plugins.videoplayer.Messages$PlaybackSpeedMessage$Builder
+ io.flutter.plugins.videoplayer.Messages$PositionMessage
+ io.flutter.plugins.videoplayer.Messages$PositionMessage$Builder
+ io.flutter.plugins.videoplayer.Messages$TextureMessage
+ io.flutter.plugins.videoplayer.Messages$TextureMessage$Builder
+ io.flutter.plugins.videoplayer.Messages$VolumeMessage
+ io.flutter.plugins.videoplayer.Messages$VolumeMessage$Builder
