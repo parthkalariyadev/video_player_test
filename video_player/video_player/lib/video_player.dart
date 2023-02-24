@@ -378,7 +378,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     if (drmType != null &&
         licenseProxyURL != null &&
         proxyURLSigningSecret != null) {
-      generateDrmUriLicense();
+      generateDrmUriLicense(licenseProxyURL, proxyURLSigningSecret);
     }
     final bool allowBackgroundPlayback =
         videoPlayerOptions?.allowBackgroundPlayback ?? false;
@@ -512,13 +512,11 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     super.dispose();
   }
 
-  void generateDrmUriLicense() {
-    String widevineProxy =
-        "https://widevine.gumlet.com/licence/63bfdecc13de5691688e9f3e";
-    String content_id = "63bfe3a8c35dfc440754ebf6";
-    String proxySecret = 'd5b98024815fd1e2f5ee38b71f47dae8';
+  void generateDrmUriLicense(
+      String licenseProxyURL, String proxyURLSigningSecret) {
+    String content_id = "63bfe56832156f9174527aa6";
 
-    String proxyUrl = "$widevineProxy/$content_id";
+    String proxyUrl = "$licenseProxyURL/$content_id";
     print("forTokenGeneration  proxyUrl:  " + proxyUrl);
     var tokenLife = 400;
     var expires = tokenLife + DateTime.now().millisecondsSinceEpoch;
@@ -527,7 +525,8 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         "${proxyUrl.substring(35, proxyUrl.length)}?expires=$expires";
 
     final hmac = HMac(SHA1Digest(), 64)
-      ..init(pointycastleapi.KeyParameter(base64.decode(proxySecret)));
+      ..init(
+          pointycastleapi.KeyParameter(base64.decode(proxyURLSigningSecret)));
     final sigBytes =
         hmac.process(utf8.encode(stringforTokenGeneration) as Uint8List);
     final signature = hex.encode(sigBytes);
