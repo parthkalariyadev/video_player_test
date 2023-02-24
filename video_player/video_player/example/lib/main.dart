@@ -32,6 +32,9 @@ class _VideoAppState extends State<VideoApp> {
       drmType: VideoDrmType.widevine,
       /*drmUriLicense:
           "https://widevine.gumlet.com/licence/63b67aa4fd4b762e422a8b3d/63bfe56832156f9174527aa6?expires=1677223615977&token=d545e9f0752784ab807552c86740709c83b654a5",*/
+      licenseProxyURL:
+          "https://widevine.gumlet.com/licence/63b67aa4fd4b762e422a8b3d",
+      proxyURLSigningSecret: "87610eee6ee466c66b4866a09c42f7f4",
     )..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});

@@ -378,8 +378,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     if (drmType != null &&
         licenseProxyURL != null &&
         proxyURLSigningSecret != null) {
-      drmUriLicense = "";
-      aaa();
+      generateDrmUriLicense();
     }
     final bool allowBackgroundPlayback =
         videoPlayerOptions?.allowBackgroundPlayback ?? false;
@@ -513,7 +512,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     super.dispose();
   }
 
-  void aaa() {
+  void generateDrmUriLicense() {
     String widevineProxy =
         "https://widevine.gumlet.com/licence/63bfdecc13de5691688e9f3e";
     String content_id = "63bfe3a8c35dfc440754ebf6";
@@ -533,12 +532,9 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         hmac.process(utf8.encode(stringforTokenGeneration) as Uint8List);
     final signature = hex.encode(sigBytes);
 
-    print(signature);
-
-    // _hmac();
     var url = "$proxyUrl?expires=$expires&token=$signature";
-    //_counter = " $url";
-    print("HMAC digest as bytes: ${signature}");
+    drmUriLicense = url;
+    //print("HMAC digest as bytes: ${signature}");
     print("HMAC digest as hex string: $url");
   }
 
