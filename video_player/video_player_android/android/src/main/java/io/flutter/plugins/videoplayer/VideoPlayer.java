@@ -180,8 +180,20 @@ final class VideoPlayer {
                               .build()
                 );
       case C.TYPE_HLS:
+        /*return new HlsMediaSource.Factory(mediaDataSourceFactory)
+            .createMediaSource(MediaItem.fromUri(uri));*/
+        Log.d("AAAAA 111", "TYPE_HLS");
         return new HlsMediaSource.Factory(mediaDataSourceFactory)
-            .createMediaSource(MediaItem.fromUri(uri));
+                .createMediaSource(new MediaItem.Builder()
+                        .setUri(uri)
+                        // DRM Configuration
+                        .setDrmConfiguration(
+                                new MediaItem.DrmConfiguration.Builder(C.WIDEVINE_UUID)
+                                        .setLicenseUri(drmURL).build()
+                        )
+                        .setMimeType(MimeTypes.APPLICATION_M3U8)
+                        .setTag(null)
+                        .build());
       case C.TYPE_OTHER:
         return new ProgressiveMediaSource.Factory(mediaDataSourceFactory)
             .createMediaSource(MediaItem.fromUri(uri));
