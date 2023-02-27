@@ -200,8 +200,8 @@ packages:
     dependency: "direct main"
     description:
       path: "video_player/video_player_android"
-      ref: "51dfcefef4b129bb4c8a89d421a959bd9220b80e"
-      resolved-ref: "51dfcefef4b129bb4c8a89d421a959bd9220b80e"
+      ref: eb599c12f2a28b3de46dcad45c34f5d40ee3805f
+      resolved-ref: eb599c12f2a28b3de46dcad45c34f5d40ee3805f
       url: "https://github.com/parthkalariyadev/video_player_test.git"
     source: git
     version: "2.3.6"
@@ -216,18 +216,20 @@ packages:
     dependency: "direct main"
     description:
       path: "video_player/video_player_platform_interface"
-      ref: "51dfcefef4b129bb4c8a89d421a959bd9220b80e"
-      resolved-ref: "51dfcefef4b129bb4c8a89d421a959bd9220b80e"
+      ref: eb599c12f2a28b3de46dcad45c34f5d40ee3805f
+      resolved-ref: eb599c12f2a28b3de46dcad45c34f5d40ee3805f
       url: "https://github.com/parthkalariyadev/video_player_test.git"
     source: git
     version: "5.1.3"
   video_player_web:
     dependency: "direct main"
     description:
-      name: video_player_web
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.13"
+      path: "video_player/video_player_web"
+      ref: eb599c12f2a28b3de46dcad45c34f5d40ee3805f
+      resolved-ref: eb599c12f2a28b3de46dcad45c34f5d40ee3805f
+      url: "https://github.com/parthkalariyadev/video_player_test.git"
+    source: git
+    version: "2.0.10"
 sdks:
   dart: ">=2.14.0 <3.0.0"
   flutter: ">=2.10.0"
