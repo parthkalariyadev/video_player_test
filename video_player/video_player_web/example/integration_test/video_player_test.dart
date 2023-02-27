@@ -8,7 +8,7 @@ import 'dart:html' as html;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:video_player_platform_interface/video_player_platform_interface.dart';
-import 'package:video_player_web/src/video_player.dart';
+import 'package:video_player_web/src/native_video_player.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
@@ -26,12 +26,9 @@ void main() {
     testWidgets('fixes critical video element config', (WidgetTester _) async {
       VideoPlayer(videoElement: video).initialize();
 
-      expect(video.controls, isFalse,
-          reason: 'Video is controlled through code');
-      expect(video.getAttribute('autoplay'), 'false',
-          reason: 'Cannot autoplay on the web');
-      expect(video.getAttribute('playsinline'), 'true',
-          reason: 'Needed by safari iOS');
+      expect(video.controls, isFalse, reason: 'Video is controlled through code');
+      expect(video.getAttribute('autoplay'), 'false', reason: 'Cannot autoplay on the web');
+      expect(video.getAttribute('playsinline'), 'true', reason: 'Needed by safari iOS');
     });
 
     testWidgets('setVolume', (WidgetTester tester) async {
@@ -86,9 +83,7 @@ void main() {
 
       setUp(() {
         streamController = StreamController<VideoEvent>();
-        player =
-            VideoPlayer(videoElement: video, eventController: streamController)
-              ..initialize();
+        player = VideoPlayer(videoElement: video, eventController: streamController)..initialize();
 
         // This stream will automatically close after 100 ms without seeing any events
         timedStream = streamController.stream.timeout(
@@ -99,14 +94,11 @@ void main() {
         );
       });
 
-      testWidgets('buffering dispatches only when it changes',
-          (WidgetTester tester) async {
+      testWidgets('buffering dispatches only when it changes', (WidgetTester tester) async {
         // Take all the "buffering" events that we see during the next few seconds
         final Future<List<bool>> stream = timedStream
-            .where(
-                (VideoEvent event) => bufferingEvents.contains(event.eventType))
-            .map((VideoEvent event) =>
-                event.eventType == VideoEventType.bufferingStart)
+            .where((VideoEvent event) => bufferingEvents.contains(event.eventType))
+            .map((VideoEvent event) => event.eventType == VideoEventType.bufferingStart)
             .toList();
 
         // Simulate some events coming from the player...
@@ -126,14 +118,11 @@ void main() {
         expect(events, <bool>[true, false, true, false, true, false]);
       });
 
-      testWidgets('canplay event does not change buffering state',
-          (WidgetTester tester) async {
+      testWidgets('canplay event does not change buffering state', (WidgetTester tester) async {
         // Take all the "buffering" events that we see during the next few seconds
         final Future<List<bool>> stream = timedStream
-            .where(
-                (VideoEvent event) => bufferingEvents.contains(event.eventType))
-            .map((VideoEvent event) =>
-                event.eventType == VideoEventType.bufferingStart)
+            .where((VideoEvent event) => bufferingEvents.contains(event.eventType))
+            .map((VideoEvent event) => event.eventType == VideoEventType.bufferingStart)
             .toList();
 
         player.setBuffering(true);
@@ -147,14 +136,11 @@ void main() {
         expect(events, <bool>[true]);
       });
 
-      testWidgets('canplaythrough event does change buffering state',
-          (WidgetTester tester) async {
+      testWidgets('canplaythrough event does change buffering state', (WidgetTester tester) async {
         // Take all the "buffering" events that we see during the next few seconds
         final Future<List<bool>> stream = timedStream
-            .where(
-                (VideoEvent event) => bufferingEvents.contains(event.eventType))
-            .map((VideoEvent event) =>
-                event.eventType == VideoEventType.bufferingStart)
+            .where((VideoEvent event) => bufferingEvents.contains(event.eventType))
+            .map((VideoEvent event) => event.eventType == VideoEventType.bufferingStart)
             .toList();
 
         player.setBuffering(true);
@@ -168,18 +154,15 @@ void main() {
         expect(events, <bool>[true, false]);
       });
 
-      testWidgets('initialized dispatches only once',
-          (WidgetTester tester) async {
+      testWidgets('initialized dispatches only once', (WidgetTester tester) async {
         // Dispatch some bogus "canplay" events from the video object
         video.dispatchEvent(html.Event('canplay'));
         video.dispatchEvent(html.Event('canplay'));
         video.dispatchEvent(html.Event('canplay'));
 
         // Take all the "initialized" events that we see during the next few seconds
-        final Future<List<VideoEvent>> stream = timedStream
-            .where((VideoEvent event) =>
-                event.eventType == VideoEventType.initialized)
-            .toList();
+        final Future<List<VideoEvent>> stream =
+            timedStream.where((VideoEvent event) => event.eventType == VideoEventType.initialized).toList();
 
         video.dispatchEvent(html.Event('canplay'));
         video.dispatchEvent(html.Event('canplay'));
