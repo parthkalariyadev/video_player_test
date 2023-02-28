@@ -207,7 +207,7 @@
     },
     {
       "name": "video_player_platform_interface",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-7907187b466e2c085c4ef2cac493999f09f51035/video_player/video_player_platform_interface",
+      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-01f27a0d584296762ebb8cb7a4298ee36ec3601f/video_player/video_player_platform_interface",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -230,7 +230,7 @@
       "languageVersion": "2.14"
     }
   ],
-  "generated": "2023-02-28T03:59:37.024474Z",
+  "generated": "2023-02-28T07:31:58.204941Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
