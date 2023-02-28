@@ -506,8 +506,8 @@ packages:
     dependency: "direct overridden"
     description:
       path: "video_player/video_player_platform_interface"
-      ref: "6fc73e47003f9a8d4a5ac144fce54cb99baa0ecc"
-      resolved-ref: "6fc73e47003f9a8d4a5ac144fce54cb99baa0ecc"
+      ref: "7907187b466e2c085c4ef2cac493999f09f51035"
+      resolved-ref: "7907187b466e2c085c4ef2cac493999f09f51035"
       url: "https://github.com/parthkalariyadev/video_player_test.git"
     source: git
     version: "5.1.3"
