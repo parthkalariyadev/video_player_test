@@ -5,7 +5,6 @@
 @JS('shaka')
 library shaka;
 
-import 'dart:html' as html;
 import 'dart:js';
 
 // ignore: depend_on_referenced_packages
@@ -16,35 +15,6 @@ bool get isNotLoaded => !isLoaded;
 
 @JS('polyfill.installAll')
 external void installPolyfills();
-
-@JS()
-class Player {
-  external Player(html.VideoElement element);
-
-  external static bool isBrowserSupported();
-
-  external Future<void> load(String src);
-  external Future<void> destroy();
-
-  external void addEventListener(String event, Function callback);
-}
-
-/// https://shaka-player-demo.appspot.com/docs/api/shaka.util.Error.html
-@JS('util.Error')
-class Error {
-  @JS('Code')
-  external static dynamic get codes;
-
-  @JS('Category')
-  external static dynamic get categories;
-
-  @JS('Severity')
-  external static dynamic get severities;
-
-  external int get code;
-  external int get category;
-  external int get severity;
-}
 
 String errorCodeName(int code) {
   return _findName(context['shaka']['util']['Error']['Code'], code);
