@@ -84,8 +84,6 @@ final class VideoPlayer {
 
     Uri uri = Uri.parse(dataSource);
     Log.d("AAAAA 111", dataSource);
-    Log.d("AAAAA", drmURL);
-    Log.d("AAAAA", drmType);
     DataSource.Factory dataSourceFactory;
 
     if (isHTTP(uri)) {

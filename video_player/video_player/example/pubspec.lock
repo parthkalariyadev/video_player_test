@@ -481,8 +481,8 @@ packages:
     dependency: "direct main"
     description:
       path: "video_player/video_player"
-      ref: f8a582dd0d27c8504b57f18d2ccbc419e591a77f
-      resolved-ref: f8a582dd0d27c8504b57f18d2ccbc419e591a77f
+      ref: "54125ad7084edc40f4f9531b0ae08d36c63100f2"
+      resolved-ref: "54125ad7084edc40f4f9531b0ae08d36c63100f2"
       url: "https://github.com/parthkalariyadev/video_player_test.git"
     source: git
     version: "2.4.4"
