@@ -30,7 +30,8 @@ class _VideoAppState extends State<VideoApp> {
     _controller = VideoPlayerController.network(
       /*'YOUR_VIDEO_URL'*/
       /*'https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'*/
-      'https://video.gumlet.io/63be5807b03c5ea88609e4d6/63bfe56832156f9174527aa6/main.mpd',
+      /*'https://video.gumlet.io/63be5807b03c5ea88609e4d6/63bfe56832156f9174527aa6/main.mpd'*/
+      'https://video.gumlet.io/63be5807b03c5ea88609e4d6/63bfe56832156f9174527aa6/main.m3u8',
       drmType: VideoDrmType.widevine,
       licenseProxyURL: /*'YOUR_LICENCE_PROXY_URL'*/
           "https://widevine.gumlet.com/licence/63b67aa4fd4b762e422a8b3d",
