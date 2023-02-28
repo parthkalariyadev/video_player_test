@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$USER_HOME$/.pub-cache/git/video_player_test-6a3b77de30d46541be93bdb863c0187d39785809/video_player/video_player/android" />
+            <option value="$USER_HOME$/.pub-cache/git/video_player_test-6a3b77de30d46541be93bdb863c0187d39785809/video_player/video_player_android/android" />
+            <option value="$USER_HOME$/.pub-cache/git/video_player_test-6a3b77de30d46541be93bdb863c0187d39785809/video_player/video_player_web/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.11/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.0.22/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.11/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.7/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.7/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.7/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/video_player_avfoundation-2.3.8/android" />
+            <option value="$PROJECT_DIR$/../../../../../../Flutter/flutter_3.3.10/packages/integration_test/android" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
