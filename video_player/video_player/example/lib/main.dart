@@ -27,16 +27,16 @@ class _VideoAppState extends State<VideoApp> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(/*'YOUR_VIDEO_URL'*/
-        'https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
-        /*'https://video.gumlet.io/63be5807b03c5ea88609e4d6/63bfe56832156f9174527aa6/main.mpd',
-      drmType: VideoDrmType.widevine,*/
-        /*licenseProxyURL: 'YOUR_LICENCE_PROXY_URL'
+    _controller = VideoPlayerController.network(
+      /*'YOUR_VIDEO_URL'*/
+      /*'https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'*/
+      'https://video.gumlet.io/63be5807b03c5ea88609e4d6/63bfe56832156f9174527aa6/main.mpd',
+      drmType: VideoDrmType.widevine,
+      licenseProxyURL: /*'YOUR_LICENCE_PROXY_URL'*/
           "https://widevine.gumlet.com/licence/63b67aa4fd4b762e422a8b3d",
-      proxyURLSigningSecret: 'YOUR_PROXY_URL_SIGNING_SECRET'
-        "87610eee6ee466c66b4866a09c42f7f4",*/
-        )
-      ..initialize().then((_) {
+      proxyURLSigningSecret: /*'YOUR_PROXY_URL_SIGNING_SECRET'*/
+          "87610eee6ee466c66b4866a09c42f7f4",
+    )..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
       });
