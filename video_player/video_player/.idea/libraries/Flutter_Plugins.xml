@@ -1,10 +1,10 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-2795934c7d719accdd316ba8d4376853cb43fa2c/video_player/video_player_web" />
+      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-2795934c7d719accdd316ba8d4376853cb43fa2c/video_player/video_player_android" />
       <root url="file://$PROJECT_DIR$" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_avfoundation-2.3.8" />
-      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-84a9f982fb8a52d646db5852aa8aec7b592a6a58/video_player/video_player_web" />
-      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-84a9f982fb8a52d646db5852aa8aec7b592a6a58/video_player/video_player_android" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -233,7 +233,6 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         formatHint = null,
         httpHeaders = const <String, String>{},
         drmType = null,
-        /*drmUriLicense = null,*/
         licenseProxyURL = null,
         proxyURLSigningSecret = null,
         drmHttpHeaders = const <String, String>{},
@@ -256,7 +255,6 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     this.videoPlayerOptions,
     this.httpHeaders = const <String, String>{},
     this.drmType,
-    /*this.drmUriLicense,*/
     this.licenseProxyURL,
     this.proxyURLSigningSecret,
     this.drmHttpHeaders = const <String, String>{},
@@ -279,7 +277,6 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         formatHint = null,
         httpHeaders = const <String, String>{},
         drmType = null,
-        /*drmUriLicense = null,*/
         licenseProxyURL = null,
         proxyURLSigningSecret = null,
         drmHttpHeaders = const <String, String>{},
@@ -301,7 +298,6 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         formatHint = null,
         httpHeaders = const <String, String>{},
         drmType = null,
-        /*drmUriLicense = null,*/
         licenseProxyURL = null,
         proxyURLSigningSecret = null,
         drmHttpHeaders = const <String, String>{},

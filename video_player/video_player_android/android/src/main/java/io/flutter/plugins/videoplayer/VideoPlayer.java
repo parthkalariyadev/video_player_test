@@ -83,7 +83,6 @@ final class VideoPlayer {
     ExoPlayer exoPlayer = new ExoPlayer.Builder(context).build();
 
     Uri uri = Uri.parse(dataSource);
-    Log.d("AAAAA 111", dataSource);
     DataSource.Factory dataSourceFactory;
 
     if (isHTTP(uri)) {

@@ -28,13 +28,14 @@ class _VideoAppState extends State<VideoApp> {
   void initState() {
     super.initState();
     _controller = VideoPlayerController.network(
-      'https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-      /*drmType: VideoDrmType.widevine,*/
+      /*'https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'*/
+      'https://video.gumlet.io/63be5807b03c5ea88609e4d6/63bfe56832156f9174527aa6/main.mpd',
+      drmType: VideoDrmType.widevine,
       /*drmUriLicense:
           "https://widevine.gumlet.com/licence/63b67aa4fd4b762e422a8b3d/63bfe56832156f9174527aa6?expires=1677223615977&token=d545e9f0752784ab807552c86740709c83b654a5",*/
-      /*licenseProxyURL:
+      licenseProxyURL:
           "https://widevine.gumlet.com/licence/63b67aa4fd4b762e422a8b3d",
-      proxyURLSigningSecret: "87610eee6ee466c66b4866a09c42f7f4",*/
+      proxyURLSigningSecret: "87610eee6ee466c66b4866a09c42f7f4",
     )..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
