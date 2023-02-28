@@ -26,9 +26,9 @@ dependencies:
 dependency_overrides:
   video_player_platform_interface:
     git:
-      url: https://github.com/AriasBros/flutter_plugins.git
-      path: packages/video_player/video_player_platform_interface
-      ref: feature_track_selection_platform_interface
+      url: https://github.com/parthkalariyadev/video_player_test.git
+      path: video_player/video_player_platform_interface
+      ref: 6fc73e47003f9a8d4a5ac144fce54cb99baa0ecc
 
 dev_dependencies:
   flutter_test:

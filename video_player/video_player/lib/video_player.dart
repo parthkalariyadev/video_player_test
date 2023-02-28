@@ -403,14 +403,14 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
           uri: dataSource,
           formatHint: formatHint,
           httpHeaders: httpHeaders,
-          /*withCredentials: withCredentials,
+          withCredentials: withCredentials,
           drmDataSource: _hasDrm
               ? DrmDataSource(
                   type: drmType!,
                   uriLicense: drmUriLicense!,
                   httpHeaders: drmHttpHeaders,
                 )
-              : null,*/
+              : null,
         );
         break;
       case DataSourceType.file:
