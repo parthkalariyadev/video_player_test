@@ -490,8 +490,8 @@ packages:
     dependency: "direct overridden"
     description:
       path: "video_player/video_player_android"
-      ref: f8a582dd0d27c8504b57f18d2ccbc419e591a77f
-      resolved-ref: f8a582dd0d27c8504b57f18d2ccbc419e591a77f
+      ref: "84a9f982fb8a52d646db5852aa8aec7b592a6a58"
+      resolved-ref: "84a9f982fb8a52d646db5852aa8aec7b592a6a58"
       url: "https://github.com/parthkalariyadev/video_player_test.git"
     source: git
     version: "2.3.6"
@@ -515,8 +515,8 @@ packages:
     dependency: "direct overridden"
     description:
       path: "video_player/video_player_web"
-      ref: f8a582dd0d27c8504b57f18d2ccbc419e591a77f
-      resolved-ref: f8a582dd0d27c8504b57f18d2ccbc419e591a77f
+      ref: "84a9f982fb8a52d646db5852aa8aec7b592a6a58"
+      resolved-ref: "84a9f982fb8a52d646db5852aa8aec7b592a6a58"
       url: "https://github.com/parthkalariyadev/video_player_test.git"
     source: git
     version: "2.0.10"
