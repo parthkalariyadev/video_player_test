@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_android/example/build/path_provider_android/intermediates/merged_res/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/mac-04/.gradle/caches/transforms-3/cdc8381483b8f93e69df15ad3eb1e86a/transformed/core-1.6.0/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_android/example/build/path_provider_android/intermediates/merged_res/debug/layout-v21/notification_action.xml",
+        "source": "/Users/mac-04/.gradle/caches/transforms-3/cdc8381483b8f93e69df15ad3eb1e86a/transformed/core-1.6.0/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_android/example/build/path_provider_android/intermediates/merged_res/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/mac-04/.gradle/caches/transforms-3/cdc8381483b8f93e69df15ad3eb1e86a/transformed/core-1.6.0/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_android/example/build/path_provider_android/intermediates/merged_res/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/mac-04/.gradle/caches/transforms-3/cdc8381483b8f93e69df15ad3eb1e86a/transformed/core-1.6.0/res/layout-v21/notification_template_icon_group.xml"
+    }
+]
