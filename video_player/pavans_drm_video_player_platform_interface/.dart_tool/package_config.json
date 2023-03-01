@@ -152,13 +152,13 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "video_player_platform_interface",
+      "name": "pavans_drm_video_player_platform_interface",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2023-03-01T12:46:27.917928Z",
+  "generated": "2023-03-01T12:51:38.297519Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
