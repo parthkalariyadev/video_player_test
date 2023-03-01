@@ -177,25 +177,25 @@
     },
     {
       "name": "video_player_android",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-ca11fced76c56f6159fa1138d270a04aa39a01c4/video_player/video_player_android",
+      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-fb940c2061cc5173908145a6996c2e1602cb6835/video_player/video_player_android",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "video_player_avfoundation",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-ca11fced76c56f6159fa1138d270a04aa39a01c4/video_player/video_player_avfoundation",
+      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-fb940c2061cc5173908145a6996c2e1602cb6835/video_player/video_player_avfoundation",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "video_player_platform_interface",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-ca11fced76c56f6159fa1138d270a04aa39a01c4/video_player/video_player_platform_interface",
+      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-fb940c2061cc5173908145a6996c2e1602cb6835/video_player/video_player_platform_interface",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "video_player_web",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-ca11fced76c56f6159fa1138d270a04aa39a01c4/video_player/video_player_web",
+      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-fb940c2061cc5173908145a6996c2e1602cb6835/video_player/video_player_web",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -206,7 +206,7 @@
       "languageVersion": "2.14"
     }
   ],
-  "generated": "2023-03-01T06:09:07.258710Z",
+  "generated": "2023-03-01T06:58:08.295796Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
