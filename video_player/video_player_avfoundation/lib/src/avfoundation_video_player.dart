@@ -32,15 +32,12 @@ class AVFoundationVideoPlayer extends VideoPlayerPlatform {
 
   @override
   Future<int?> create(DataSource dataSource) async {
-    print("create AVFoundationVideoPlayer");
-    if (dataSource.drmDataSource != null) {
-      print(dataSource.drmDataSource!.uriLicense);
-      print(dataSource.drmDataSource!.type);
-    }
     String? asset;
     String? packageName;
     String? uri;
     String? formatHint;
+    String? drmUrl;
+    String? drmType;
     Map<String, String> httpHeaders = <String, String>{};
     switch (dataSource.sourceType) {
       case DataSourceType.asset:
@@ -51,6 +48,8 @@ class AVFoundationVideoPlayer extends VideoPlayerPlatform {
         uri = dataSource.uri;
         formatHint = _videoFormatStringMap[dataSource.formatHint];
         httpHeaders = dataSource.httpHeaders;
+        drmUrl = dataSource.drmDataSource?.uriLicense;
+        drmType = dataSource.drmDataSource?.type;
         break;
       case DataSourceType.file:
         uri = dataSource.uri;
@@ -63,6 +62,8 @@ class AVFoundationVideoPlayer extends VideoPlayerPlatform {
       asset: asset,
       packageName: packageName,
       uri: uri,
+      drmUrl: drmUrl,
+      drmType: drmType,
       httpHeaders: httpHeaders,
       formatHint: formatHint,
     );
