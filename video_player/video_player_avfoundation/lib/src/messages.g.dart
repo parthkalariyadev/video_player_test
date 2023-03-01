@@ -287,7 +287,6 @@ class AVFoundationVideoPlayerApi {
   }
 
   Future<TextureMessage> create(CreateMessage arg_msg) async {
-    print("replyMap['result'] create");
     final BasicMessageChannel<Object?> channel = BasicMessageChannel<Object?>(
         'dev.flutter.pigeon.AVFoundationVideoPlayerApi.create', codec,
         binaryMessenger: _binaryMessenger);
@@ -312,8 +311,6 @@ class AVFoundationVideoPlayerApi {
         message: 'Host platform returned null value for non-null return value.',
       );
     } else {
-      print("replyMap['result']");
-      print(replyMap['result']);
       return (replyMap['result'] as TextureMessage?)!;
     }
   }

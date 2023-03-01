@@ -32,6 +32,11 @@ class AVFoundationVideoPlayer extends VideoPlayerPlatform {
 
   @override
   Future<int?> create(DataSource dataSource) async {
+    print("create AVFoundationVideoPlayer");
+    if (dataSource.drmDataSource != null) {
+      print(dataSource.drmDataSource!.uriLicense);
+      print(dataSource.drmDataSource!.type);
+    }
     String? asset;
     String? packageName;
     String? uri;
