@@ -125,8 +125,8 @@ packages:
     dependency: "direct main"
     description:
       path: "video_player/pavans_drm_video_player_android"
-      ref: a79fdb4c9b21f3d6794c3bd6bc73af490984dc02
-      resolved-ref: a79fdb4c9b21f3d6794c3bd6bc73af490984dc02
+      ref: eab461377f18d8e108dd339e362345afb6ea0d5a
+      resolved-ref: eab461377f18d8e108dd339e362345afb6ea0d5a
       url: "https://github.com/parthkalariyadev/video_player_test.git"
     source: git
     version: "2.3.6"
