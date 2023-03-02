@@ -7,9 +7,9 @@
 
 // ignore_for_file: library_private_types_in_public_api, public_member_api_docs
 
+import 'package:drm_video_player/video_player.dart';
 // #docregion basic-example
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
 
 void main() => runApp(const VideoApp());
 
