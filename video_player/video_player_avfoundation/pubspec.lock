@@ -236,11 +236,9 @@ packages:
   video_player_platform_interface:
     dependency: "direct main"
     description:
-      path: "video_player/video_player_platform_interface"
-      ref: "01f27a0d584296762ebb8cb7a4298ee36ec3601f"
-      resolved-ref: "01f27a0d584296762ebb8cb7a4298ee36ec3601f"
-      url: "https://github.com/parthkalariyadev/video_player_test.git"
-    source: git
+      path: "../video_player_platform_interface"
+      relative: true
+    source: path
     version: "5.1.3"
   watcher:
     dependency: transitive

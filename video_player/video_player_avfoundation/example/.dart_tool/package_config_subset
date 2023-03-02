@@ -238,10 +238,6 @@ vector_math
 2.14
 file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.1/
 file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.1/lib/
-video_player_platform_interface
-2.12
-file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_platform_interface-5.1.4/
-file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_platform_interface-5.1.4/lib/
 vm_service
 2.12
 file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/vm_service-7.5.0/
@@ -302,6 +298,10 @@ video_player_avfoundation
 2.14
 file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_avfoundation/
 file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_avfoundation/lib/
+video_player_platform_interface
+2.12
+file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_platform_interface/
+file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_platform_interface/lib/
 video_player_example
 2.12
 file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_avfoundation/example/
