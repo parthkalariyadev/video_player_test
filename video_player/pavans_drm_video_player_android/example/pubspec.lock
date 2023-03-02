@@ -292,6 +292,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.7"
+  pavans_drm_video_player_android:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "2.3.6"
   pavans_drm_video_player_platform_interface:
     dependency: transitive
     description:
@@ -460,13 +467,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
-  video_player_android:
-    dependency: "direct main"
-    description:
-      path: ".."
-      relative: true
-    source: path
-    version: "2.3.6"
   video_player_platform_interface:
     dependency: "direct main"
     description:

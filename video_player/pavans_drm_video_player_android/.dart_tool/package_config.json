@@ -224,13 +224,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "video_player_android",
+      "name": "pavans_drm_video_player_android",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     }
   ],
-  "generated": "2023-03-01T13:26:29.629709Z",
+  "generated": "2023-03-02T05:11:09.379751Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
