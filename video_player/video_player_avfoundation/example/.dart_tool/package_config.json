@@ -405,7 +405,7 @@
     },
     {
       "name": "video_player_platform_interface",
-      "rootUri": "../../../video_player_platform_interface",
+      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-6726f8c00c3f03b760f512dcbdf696fd95094ef0/video_player/video_player_platform_interface",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -464,7 +464,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2023-03-02T11:55:45.879962Z",
+  "generated": "2023-03-02T13:34:46.861342Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
