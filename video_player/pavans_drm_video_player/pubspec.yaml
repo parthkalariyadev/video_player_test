@@ -38,7 +38,7 @@ dependencies:
     git:
       url: https://github.com/parthkalariyadev/video_player_test.git
       path: video_player/pavans_drm_video_player_android
-      ref: eab461377f18d8e108dd339e362345afb6ea0d5a
+      ref: 10f9057b3fa9b5e71aa0dc1768f9b70ed45260d0
 
 dependency_overrides:
   video_player_web:

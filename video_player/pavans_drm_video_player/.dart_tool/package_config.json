@@ -111,7 +111,7 @@
     },
     {
       "name": "pavans_drm_video_player_android",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-eab461377f18d8e108dd339e362345afb6ea0d5a/video_player/pavans_drm_video_player_android",
+      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-10f9057b3fa9b5e71aa0dc1768f9b70ed45260d0/video_player/pavans_drm_video_player_android",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -212,7 +212,7 @@
       "languageVersion": "2.14"
     }
   ],
-  "generated": "2023-03-02T08:18:41.639656Z",
+  "generated": "2023-03-02T09:47:29.072858Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
