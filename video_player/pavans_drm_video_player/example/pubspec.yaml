@@ -20,7 +20,7 @@ dependencies:
     git:
       url: https://github.com/parthkalariyadev/video_player_test.git
       path: video_player/pavans_drm_video_player
-      ref: 070332eefb1bb25a4666c02446dcbe8f2d0b46c1
+      ref: aa1a6bffc5de8cd89fcce744298f9828f7c6e63d
 
 dev_dependencies:
   flutter_driver:

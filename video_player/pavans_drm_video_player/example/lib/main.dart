@@ -32,7 +32,7 @@ class _VideoAppState extends State<VideoApp> {
       /*'https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'*/
       /*'https://video.gumlet.io/63be5807b03c5ea88609e4d6/63bfe56832156f9174527aa6/main.mpd'*/
       'https://video.gumlet.io/63be5807b03c5ea88609e4d6/63bfe56832156f9174527aa6/main.m3u8',
-      drmType: "widevine" /*VideoDrmType.fairplay*/,
+      drmType: VideoDrmType.widevine,
       licenseProxyURL: /*'YOUR_LICENCE_PROXY_URL'*/
           "https://widevine.gumlet.com/licence/63b67aa4fd4b762e422a8b3d",
       proxyURLSigningSecret: /*'YOUR_PROXY_URL_SIGNING_SECRET'*/
