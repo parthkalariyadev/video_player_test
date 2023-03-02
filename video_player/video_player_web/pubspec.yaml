@@ -10,7 +10,7 @@ environment:
 
 flutter:
   plugin:
-    implements: video_player
+    implements: drm_video_player
     platforms:
       web:
         pluginClass: VideoPlayerPlugin

@@ -80,6 +80,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "drm_video_player",
+      "rootUri": "../../",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.3.1",
       "packageUri": "lib/",
@@ -410,32 +416,26 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "video_player",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-fb940c2061cc5173908145a6996c2e1602cb6835/video_player/video_player",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
       "name": "video_player_android",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-fb940c2061cc5173908145a6996c2e1602cb6835/video_player/video_player_android",
+      "rootUri": "../../../video_player_android",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "video_player_avfoundation",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-fb940c2061cc5173908145a6996c2e1602cb6835/video_player/video_player_avfoundation",
+      "rootUri": "../../../video_player_avfoundation",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "video_player_platform_interface",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-fb940c2061cc5173908145a6996c2e1602cb6835/video_player/video_player_platform_interface",
+      "rootUri": "../../../video_player_platform_interface",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "video_player_web",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-fb940c2061cc5173908145a6996c2e1602cb6835/video_player/video_player_web",
+      "rootUri": "../../../video_player_web",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -494,7 +494,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2023-03-02T11:00:19.910101Z",
+  "generated": "2023-03-02T11:57:57.298744Z",
   "generator": "pub",
   "generatorVersion": "2.18.4"
 }

@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "FLTIntegrationTestRunner.h"
 #import "IntegrationTestIosTest.h"
 #import "IntegrationTestPlugin.h"
 
