@@ -121,6 +121,24 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
+  pavans_drm_video_player_android:
+    dependency: "direct main"
+    description:
+      path: "video_player/pavans_drm_video_player_android"
+      ref: "6785d3a6c2cfc686db24714b8e51c87da0893969"
+      resolved-ref: "6785d3a6c2cfc686db24714b8e51c87da0893969"
+      url: "https://github.com/parthkalariyadev/video_player_test.git"
+    source: git
+    version: "2.3.6"
+  pavans_drm_video_player_platform_interface:
+    dependency: "direct main"
+    description:
+      path: "video_player/pavans_drm_video_player_platform_interface"
+      ref: b8cf607744e64aaf242bfdd091a51108e417f42a
+      resolved-ref: b8cf607744e64aaf242bfdd091a51108e417f42a
+      url: "https://github.com/parthkalariyadev/video_player_test.git"
+    source: git
+    version: "5.1.3"
   plugin_platform_interface:
     dependency: transitive
     description:
@@ -196,15 +214,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
-  video_player_android:
-    dependency: "direct main"
-    description:
-      path: "video_player/video_player_android"
-      ref: fb940c2061cc5173908145a6996c2e1602cb6835
-      resolved-ref: fb940c2061cc5173908145a6996c2e1602cb6835
-      url: "https://github.com/parthkalariyadev/video_player_test.git"
-    source: git
-    version: "2.3.6"
   video_player_avfoundation:
     dependency: "direct main"
     description:
@@ -215,14 +224,12 @@ packages:
     source: git
     version: "2.3.5"
   video_player_platform_interface:
-    dependency: "direct main"
+    dependency: transitive
     description:
-      path: "video_player/video_player_platform_interface"
-      ref: fb940c2061cc5173908145a6996c2e1602cb6835
-      resolved-ref: fb940c2061cc5173908145a6996c2e1602cb6835
-      url: "https://github.com/parthkalariyadev/video_player_test.git"
-    source: git
-    version: "5.1.3"
+      name: video_player_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.1.4"
   video_player_web:
     dependency: "direct main"
     description:
