@@ -26,13 +26,6 @@ dependencies:
       path: video_player/pavans_drm_video_player_platform_interface
       ref: b8cf607744e64aaf242bfdd091a51108e417f42a
 
-dependency_overrides:
-  pavans_drm_video_player_platform_interface:
-    git:
-      url: https://github.com/parthkalariyadev/video_player_test.git
-      path: video_player/pavans_drm_video_player_platform_interface
-      ref: b8cf607744e64aaf242bfdd091a51108e417f42a
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
