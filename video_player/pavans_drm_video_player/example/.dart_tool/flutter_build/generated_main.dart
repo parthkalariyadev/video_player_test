@@ -10,6 +10,7 @@ export 'package:video_player_example/main.dart';
 
 import 'package:video_player_example/main.dart' as entrypoint;
 import 'dart:io'; // flutter_ignore: dart_io_import.
+import 'package:pavans_drm_video_player_android/pavans_drm_video_player_android.dart';
 import 'package:path_provider_android/path_provider_android.dart';
 import 'package:path_provider_ios/path_provider_ios.dart';
 import 'package:path_provider_linux/path_provider_linux.dart';
@@ -22,6 +23,16 @@ class _PluginRegistrant {
   @pragma('vm:entry-point')
   static void register() {
     if (Platform.isAndroid) {
+      try {
+        AndroidVideoPlayer.registerWith();
+      } catch (err) {
+        print(
+          '`pavans_drm_video_player_android` threw an error: $err. '
+          'The app may not function as expected until you remove this plugin from pubspec.yaml'
+        );
+        rethrow;
+      }
+
       try {
         PathProviderAndroid.registerWith();
       } catch (err) {

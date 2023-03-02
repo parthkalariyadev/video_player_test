@@ -3,6 +3,6 @@
 3    package="io.flutter.plugins.videoplayer" >
 4
 5    <uses-sdk android:minSdkVersion="16" />
-5-->/Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-a79fdb4c9b21f3d6794c3bd6bc73af490984dc02/video_player/pavans_drm_video_player_android/android/src/main/AndroidManifest.xml
+5-->/Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-10f9057b3fa9b5e71aa0dc1768f9b70ed45260d0/video_player/pavans_drm_video_player_android/android/src/main/AndroidManifest.xml
 6
 7</manifest>

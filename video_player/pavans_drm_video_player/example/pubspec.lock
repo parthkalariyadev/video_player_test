@@ -315,8 +315,8 @@ packages:
     dependency: "direct main"
     description:
       path: "video_player/pavans_drm_video_player"
-      ref: "049e471f3cb575c54e1127fb452d5d470ee82c52"
-      resolved-ref: "049e471f3cb575c54e1127fb452d5d470ee82c52"
+      ref: "74f3a13423036e59f86f0a845d8d7cdf617ec7ae"
+      resolved-ref: "74f3a13423036e59f86f0a845d8d7cdf617ec7ae"
       url: "https://github.com/parthkalariyadev/video_player_test.git"
     source: git
     version: "2.4.4"
@@ -324,8 +324,8 @@ packages:
     dependency: transitive
     description:
       path: "video_player/pavans_drm_video_player_android"
-      ref: eab461377f18d8e108dd339e362345afb6ea0d5a
-      resolved-ref: eab461377f18d8e108dd339e362345afb6ea0d5a
+      ref: "10f9057b3fa9b5e71aa0dc1768f9b70ed45260d0"
+      resolved-ref: "10f9057b3fa9b5e71aa0dc1768f9b70ed45260d0"
       url: "https://github.com/parthkalariyadev/video_player_test.git"
     source: git
     version: "2.3.6"
