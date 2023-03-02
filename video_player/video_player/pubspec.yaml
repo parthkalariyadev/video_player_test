@@ -23,14 +23,39 @@ dependencies:
   flutter:
     sdk: flutter
   html: ^0.15.0
+
+  # use this for local path.
+  # video_player_platform_interface:
+    # path: ../video_player_platform_interface
+  # video_player_android:
+    # path: ../video_player_android
+  # video_player_avfoundation:
+    # path: ../video_player_avfoundation
+  # video_player_web:
+    # path: ../video_player_web
+
+  # use this for github path.
   video_player_platform_interface:
-    path: ../video_player_platform_interface
+    git:
+      url: https://github.com/parthkalariyadev/video_player_test.git
+      path: video_player/video_player_platform_interface
+      ref: 6726f8c00c3f03b760f512dcbdf696fd95094ef0
   video_player_android:
-    path: ../video_player_android
+    git:
+      url: https://github.com/parthkalariyadev/video_player_test.git
+      path: video_player/video_player_android
+      ref: 4fc434e1e3a732e932e2aa53e53999065f8516f0
   video_player_avfoundation:
-    path: ../video_player_avfoundation
+    git:
+      url: https://github.com/parthkalariyadev/video_player_test.git
+      path: video_player/video_player_avfoundation
+      ref: 4fc434e1e3a732e932e2aa53e53999065f8516f0
   video_player_web:
-    path: ../video_player_web
+    git:
+      url: https://github.com/parthkalariyadev/video_player_test.git
+      path: video_player/video_player_web
+      ref: 4fc434e1e3a732e932e2aa53e53999065f8516f0
+
   pointycastle: ^3.6.2
   convert: ^3.1.0
 
