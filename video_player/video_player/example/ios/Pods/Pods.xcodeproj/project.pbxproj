@@ -20,27 +20,27 @@
 
 /* Begin PBXBuildFile section */
 		1853EE7139D3912845EAEB1A0CDFAD16 /* IntegrationTestIosTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFF7DEBB1FE1A43CA737B1384605128 /* IntegrationTestIosTest.m */; };
-		1B85838DE4E95EAC79396D5C3CCD6275 /* drm_video_player_avfoundation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D42FEE7499C2EFE7466B46FE7CE18D4 /* drm_video_player_avfoundation-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1B85838DE4E95EAC79396D5C3CCD6275 /* drm_video_player_avfoundation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F25BEFDA86C05D644B983EBB057E78A /* drm_video_player_avfoundation-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		20502DB99B6867FE0752EB037ED86156 /* messages.g.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F9C123E5DA68B7AFE5B963E03EF02AD /* messages.g.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		25FBA12BDD60208F83CDEE5F57D15287 /* FLTVideoPlayerPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 076D61B73F4AE67820E2321B5FC40E37 /* FLTVideoPlayerPlugin.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2C525E59106AFC6F9ECBB94BB65A0F2C /* path_provider_ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A861AF8E7596283A268964A5A6022A22 /* path_provider_ios-dummy.m */; };
 		2E7F0CD73C4BAA1241AE7BAA3AF64D02 /* IntegrationTestPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B75FDF8D316DAC96FCAB862DAED2AC6 /* IntegrationTestPlugin.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2ED1F655ECE8F0FD05EFA41BEC91EF3A /* messages.g.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C32327A8398E664FDC4D3814F4754 /* messages.g.m */; };
 		3061493A24F938B8B501B17852DA04CA /* IntegrationTestIosTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 643DC97880C98D2F162847B45FA47E54 /* IntegrationTestIosTest.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3118FFB99E05B5A59B46C2AA50BE2C00 /* integration_test-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44584151A1F1F32ECC4D5DE802285B7C /* integration_test-dummy.m */; };
 		3487EFFF6C2CC32098C28903677F489F /* IntegrationTestPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B0961ED4D56350C39DAD1F04B85A3AB7 /* IntegrationTestPlugin.m */; };
+		3DCC0B66EAD43EE615EFDA3513884C13 /* FLTVideoPlayerPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = ECCED68539E4B49ED70E8071907E4C49 /* FLTVideoPlayerPlugin.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		45A3B9D8B5BD2C066E05EDD8E00050DD /* FLTIntegrationTestRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = C995762294CC498B4FB58986A45962DB /* FLTIntegrationTestRunner.m */; };
-		6DD10839DD809C1E21E055538CF5AB10 /* messages.g.h in Headers */ = {isa = PBXBuildFile; fileRef = B7EB76A76D57A0A9798469D3BD920E30 /* messages.g.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7529C70D0B76E103A96F5154E48FDF96 /* messages.g.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA18D035209E34020C7DE5D83825059 /* messages.g.m */; };
 		895F944EB9CC1A863ECD4BD73D31F28A /* FLTPathProviderPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = C3924F3BAFB05B7C9AC21709903A2310 /* FLTPathProviderPlugin.m */; };
 		89BB67D73F2FAD09DCD950A8814E9D19 /* integration_test-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62574FF2F884E42BF797FEE048C42358 /* integration_test-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9339C83E9B23906010C7A86B8A2FB756 /* Pods-Runner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 139605D53E86A88BEF73EE9ECD0B6E24 /* Pods-Runner-dummy.m */; };
-		BA6923F11BD6BE489CD26BE6C24344BC /* FLTVideoPlayerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA1370C557680CBD2A191CB0AD1397B /* FLTVideoPlayerPlugin.m */; };
+		A3E3A7777DC6D1D82AAAD4DEAE1EAB5E /* FLTVideoPlayerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D844E06ACF06E056C7F8DEB5891DB4 /* FLTVideoPlayerPlugin.m */; };
+		B75B97C357830A25037D834E98B5441D /* AVAssetTrackUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A27A30504C8883ADD4AEC38EBA5DEB5 /* AVAssetTrackUtils.m */; };
+		BAF4B68596BB8E360ED335C8038475E8 /* messages.g.h in Headers */ = {isa = PBXBuildFile; fileRef = E590056F6ABBE4F606482E6A5F13C978 /* messages.g.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BC227024FCF7AD84E62A24FA115414E7 /* path_provider_ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2B074CAD122775B11AB840F4AD42430 /* path_provider_ios-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C230D9A9945EE2EC1AF6AD812C0A48B0 /* FLTPathProviderPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BBB5FD6BD3FDB7CED26DE643EBB1084 /* FLTPathProviderPlugin.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C849C488D41EFDFEE6CD5B68E1ADD6B4 /* drm_video_player_avfoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A55087AE5242EDC5FCCB78F7E205B7 /* drm_video_player_avfoundation-dummy.m */; };
-		F0C4C5D77F553648F9EB39959DC658DA /* AVAssetTrackUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E7DFF4BA0DDCE56EAA54E7EADBE37B /* AVAssetTrackUtils.m */; };
-		F167B85CAEC2BE60A764818FCF850E62 /* AVAssetTrackUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2158EEBBFD6F34F0CD9A513AD3A3E0D1 /* AVAssetTrackUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C849C488D41EFDFEE6CD5B68E1ADD6B4 /* drm_video_player_avfoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A26307482D4443D0DE0AE59DC2B044BB /* drm_video_player_avfoundation-dummy.m */; };
+		D450A4C7CAEA06D072F06E939C2D3DB3 /* messages.g.m in Sources */ = {isa = PBXBuildFile; fileRef = 739FC0A3FD6BBC37676FA9178B73B972 /* messages.g.m */; };
+		E628117EB772556286E2526FB719FC98 /* AVAssetTrackUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AA201C654B0C1C61D0057252A755CC5F /* AVAssetTrackUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FBE286CEE69BA5632AEABAF6B9BC7E31 /* FLTIntegrationTestRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = 301EEBAFE609A113E29F0649103174A1 /* FLTIntegrationTestRunner.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
@@ -97,28 +97,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		076D61B73F4AE67820E2321B5FC40E37 /* FLTVideoPlayerPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLTVideoPlayerPlugin.h; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_avfoundation/ios/Classes/FLTVideoPlayerPlugin.h"; sourceTree = "<group>"; };
 		0B2B382EBF0B35990FE9D44E0A900DDA /* drm_video_player_avfoundation */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = drm_video_player_avfoundation; path = libdrm_video_player_avfoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFF7DEBB1FE1A43CA737B1384605128 /* IntegrationTestIosTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IntegrationTestIosTest.m; path = ../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/packages/integration_test/ios/Classes/IntegrationTestIosTest.m; sourceTree = "<group>"; };
 		0E9A35331108C97FEDA7CB25374D59ED /* Pods-Runner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Runner-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1019CC54ED1DB0BAC1D5E77B5A74545F /* path_provider_ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "path_provider_ios-prefix.pch"; sourceTree = "<group>"; };
 		139605D53E86A88BEF73EE9ECD0B6E24 /* Pods-Runner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Runner-dummy.m"; sourceTree = "<group>"; };
+		17DA1740EFAC7BB8215DB821EEDF6E3A /* drm_video_player_avfoundation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "drm_video_player_avfoundation-prefix.pch"; sourceTree = "<group>"; };
 		20A80C36589268662990FD581F0386AE /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
-		2158EEBBFD6F34F0CD9A513AD3A3E0D1 /* AVAssetTrackUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVAssetTrackUtils.h; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_avfoundation/ios/Classes/AVAssetTrackUtils.h"; sourceTree = "<group>"; };
-		251BCB02BC9AE524E4C6D766512A5FE4 /* drm_video_player_avfoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = drm_video_player_avfoundation.debug.xcconfig; sourceTree = "<group>"; };
+		2483414E06BDF4AB6889029E5C7F7C02 /* drm_video_player_avfoundation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = drm_video_player_avfoundation.podspec; path = "../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ef1cacbe11f65c4a067a9afa22294adc85ce4a68/video_player/video_player_avfoundation/ios/drm_video_player_avfoundation.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		301EEBAFE609A113E29F0649103174A1 /* FLTIntegrationTestRunner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLTIntegrationTestRunner.h; path = ../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/packages/integration_test/ios/Classes/FLTIntegrationTestRunner.h; sourceTree = "<group>"; };
 		3059509AC94D6ABFFC57C7F9248990AB /* Pods-Runner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Runner-acknowledgements.plist"; sourceTree = "<group>"; };
 		315227B027D26E1FB74FF50B340C6A2D /* Flutter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Flutter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		32183FD3A0D38CDA30DE76DAE52CF211 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		36E4EC684AEE18E50DE40734ADEC3F46 /* Flutter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.debug.xcconfig; sourceTree = "<group>"; };
 		38F13A7CA536BDD7E4B3EBC9368935B5 /* path_provider_ios.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = path_provider_ios.podspec; path = "../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.11/ios/path_provider_ios.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		394FBE6250775371A294D06E500D8D85 /* drm_video_player_avfoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = drm_video_player_avfoundation.release.xcconfig; sourceTree = "<group>"; };
 		3CA18D035209E34020C7DE5D83825059 /* messages.g.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = messages.g.m; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.11/ios/Classes/messages.g.m"; sourceTree = "<group>"; };
-		42F99BD226A0619D2E29CB6246197068 /* drm_video_player_avfoundation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = drm_video_player_avfoundation.podspec; path = "../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_avfoundation/ios/drm_video_player_avfoundation.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		44584151A1F1F32ECC4D5DE802285B7C /* integration_test-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "integration_test-dummy.m"; sourceTree = "<group>"; };
-		479EB532CC409048E629B3552132AA1D /* drm_video_player_avfoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = drm_video_player_avfoundation.modulemap; sourceTree = "<group>"; };
 		4B75FDF8D316DAC96FCAB862DAED2AC6 /* IntegrationTestPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IntegrationTestPlugin.h; path = ../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/packages/integration_test/ios/Classes/IntegrationTestPlugin.h; sourceTree = "<group>"; };
 		4BE9B1533F3964622E91E716647C5835 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
-		55A55087AE5242EDC5FCCB78F7E205B7 /* drm_video_player_avfoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "drm_video_player_avfoundation-dummy.m"; sourceTree = "<group>"; };
+		5A27A30504C8883ADD4AEC38EBA5DEB5 /* AVAssetTrackUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVAssetTrackUtils.m; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ef1cacbe11f65c4a067a9afa22294adc85ce4a68/video_player/video_player_avfoundation/ios/Classes/AVAssetTrackUtils.m"; sourceTree = "<group>"; };
 		5B707EA37CBC3DFDABC9D9DFAD54F4BD /* integration_test */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = integration_test; path = libintegration_test.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F9C123E5DA68B7AFE5B963E03EF02AD /* messages.g.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = messages.g.h; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.11/ios/Classes/messages.g.h"; sourceTree = "<group>"; };
 		62574FF2F884E42BF797FEE048C42358 /* integration_test-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "integration_test-umbrella.h"; sourceTree = "<group>"; };
@@ -127,18 +125,18 @@
 		6D0FEFB4E703909901D67F4D380F5148 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = "../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.11/LICENSE"; sourceTree = "<group>"; };
 		6DB16CEF7CFB697A71A3614FAD4C9086 /* integration_test-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "integration_test-prefix.pch"; sourceTree = "<group>"; };
 		6EED25CD5B84F5C981EF080A95F4D24E /* integration_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = integration_test.release.xcconfig; sourceTree = "<group>"; };
-		7D42FEE7499C2EFE7466B46FE7CE18D4 /* drm_video_player_avfoundation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "drm_video_player_avfoundation-umbrella.h"; sourceTree = "<group>"; };
+		739FC0A3FD6BBC37676FA9178B73B972 /* messages.g.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = messages.g.m; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ef1cacbe11f65c4a067a9afa22294adc85ce4a68/video_player/video_player_avfoundation/ios/Classes/messages.g.m"; sourceTree = "<group>"; };
+		78016F18B06AF84D1F3BF3F1E0CB69A2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = "../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ef1cacbe11f65c4a067a9afa22294adc85ce4a68/video_player/video_player_avfoundation/LICENSE"; sourceTree = "<group>"; };
+		7F25BEFDA86C05D644B983EBB057E78A /* drm_video_player_avfoundation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "drm_video_player_avfoundation-umbrella.h"; sourceTree = "<group>"; };
 		7FE369E4068C0A2E8649CEF216F32B3A /* integration_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = integration_test.debug.xcconfig; sourceTree = "<group>"; };
 		8BBB5FD6BD3FDB7CED26DE643EBB1084 /* FLTPathProviderPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLTPathProviderPlugin.h; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.11/ios/Classes/FLTPathProviderPlugin.h"; sourceTree = "<group>"; };
-		90E7DFF4BA0DDCE56EAA54E7EADBE37B /* AVAssetTrackUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVAssetTrackUtils.m; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_avfoundation/ios/Classes/AVAssetTrackUtils.m"; sourceTree = "<group>"; };
-		91EE860E4F0C5DDC0569DB6BC459DBA3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = "../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_avfoundation/LICENSE"; sourceTree = "<group>"; };
 		997FB0CE1FC5B8B28AE76318536BF91C /* integration_test.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = integration_test.modulemap; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0D844E06ACF06E056C7F8DEB5891DB4 /* FLTVideoPlayerPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLTVideoPlayerPlugin.m; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ef1cacbe11f65c4a067a9afa22294adc85ce4a68/video_player/video_player_avfoundation/ios/Classes/FLTVideoPlayerPlugin.m"; sourceTree = "<group>"; };
+		A26307482D4443D0DE0AE59DC2B044BB /* drm_video_player_avfoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "drm_video_player_avfoundation-dummy.m"; sourceTree = "<group>"; };
 		A861AF8E7596283A268964A5A6022A22 /* path_provider_ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "path_provider_ios-dummy.m"; sourceTree = "<group>"; };
-		AB02D5FEA78E8A1C3B7154AA85FBDF9C /* drm_video_player_avfoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = drm_video_player_avfoundation.release.xcconfig; sourceTree = "<group>"; };
-		AB1C2984069CC73D85677A5AD6843283 /* drm_video_player_avfoundation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "drm_video_player_avfoundation-prefix.pch"; sourceTree = "<group>"; };
+		AA201C654B0C1C61D0057252A755CC5F /* AVAssetTrackUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVAssetTrackUtils.h; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ef1cacbe11f65c4a067a9afa22294adc85ce4a68/video_player/video_player_avfoundation/ios/Classes/AVAssetTrackUtils.h"; sourceTree = "<group>"; };
 		B0961ED4D56350C39DAD1F04B85A3AB7 /* IntegrationTestPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IntegrationTestPlugin.m; path = ../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/packages/integration_test/ios/Classes/IntegrationTestPlugin.m; sourceTree = "<group>"; };
-		B7EB76A76D57A0A9798469D3BD920E30 /* messages.g.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = messages.g.h; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_avfoundation/ios/Classes/messages.g.h"; sourceTree = "<group>"; };
 		B97E775A57726CD75BC91D848FD59FB6 /* path_provider_ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = path_provider_ios.modulemap; sourceTree = "<group>"; };
 		BEDB77D7DFDD5C9008E7D3FC4206FEC9 /* path_provider_ios */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = path_provider_ios; path = libpath_provider_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9FE98203EE48AB09B6FFD2AFAB6947 /* path_provider_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = path_provider_ios.debug.xcconfig; sourceTree = "<group>"; };
@@ -146,10 +144,12 @@
 		C3924F3BAFB05B7C9AC21709903A2310 /* FLTPathProviderPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLTPathProviderPlugin.m; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.11/ios/Classes/FLTPathProviderPlugin.m"; sourceTree = "<group>"; };
 		C995762294CC498B4FB58986A45962DB /* FLTIntegrationTestRunner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLTIntegrationTestRunner.m; path = ../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/packages/integration_test/ios/Classes/FLTIntegrationTestRunner.m; sourceTree = "<group>"; };
 		C9DCE25D304F2234C105644F2BB445CA /* integration_test.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = integration_test.podspec; path = ../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/packages/integration_test/ios/integration_test.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CD8C32327A8398E664FDC4D3814F4754 /* messages.g.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = messages.g.m; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_avfoundation/ios/Classes/messages.g.m"; sourceTree = "<group>"; };
-		CDA1370C557680CBD2A191CB0AD1397B /* FLTVideoPlayerPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLTVideoPlayerPlugin.m; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_avfoundation/ios/Classes/FLTVideoPlayerPlugin.m"; sourceTree = "<group>"; };
 		DB8815A97B450329CD5628ACCB48DB58 /* path_provider_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = path_provider_ios.release.xcconfig; sourceTree = "<group>"; };
+		E590056F6ABBE4F606482E6A5F13C978 /* messages.g.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = messages.g.h; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ef1cacbe11f65c4a067a9afa22294adc85ce4a68/video_player/video_player_avfoundation/ios/Classes/messages.g.h"; sourceTree = "<group>"; };
+		EA3804BCD1CFEA2C9692F16FB08C0C3D /* drm_video_player_avfoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = drm_video_player_avfoundation.debug.xcconfig; sourceTree = "<group>"; };
 		EC508A91D0EBAF104EAC455023A82A8C /* Flutter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Flutter.release.xcconfig; sourceTree = "<group>"; };
+		ECCED68539E4B49ED70E8071907E4C49 /* FLTVideoPlayerPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLTVideoPlayerPlugin.h; path = "../../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ef1cacbe11f65c4a067a9afa22294adc85ce4a68/video_player/video_player_avfoundation/ios/Classes/FLTVideoPlayerPlugin.h"; sourceTree = "<group>"; };
+		FDA4DBA1DC66A43220F3C6725CCFD9DA /* drm_video_player_avfoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = drm_video_player_avfoundation.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +184,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0041CE98F526D4FAEC906385E26D39EA /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				43FE8D1C1E70703B4D4BB623417D7EE6 /* Classes */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
 		00F8308FA88530213E5CFE6762A7F3A1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +225,15 @@
 			path = example;
 			sourceTree = "<group>";
 		};
+		04AEEF0EA5EBF1A7A56395403641A2B1 /* .symlinks */ = {
+			isa = PBXGroup;
+			children = (
+				35DB15F4C2FD8E703DBD2B9D795A3B54 /* plugins */,
+			);
+			name = .symlinks;
+			path = .symlinks;
+			sourceTree = "<group>";
+		};
 		109EDF0EF32D38AC574C2FB5D767FBBA /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,13 +245,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1136A0F4F90B4C9CE9076354CE5E0179 /* .. */ = {
+		113AFA85AA5B15FF2361E188D51FB9B2 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				660F3A47254482C282B1027FF751EC00 /* .. */,
+				2483414E06BDF4AB6889029E5C7F7C02 /* drm_video_player_avfoundation.podspec */,
+				78016F18B06AF84D1F3BF3F1E0CB69A2 /* LICENSE */,
 			);
-			name = ..;
-			path = ..;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		12280A4BC8B215C0A2757D8CF2FDF0C7 /* .. */ = {
@@ -249,6 +267,15 @@
 			isa = PBXGroup;
 			children = (
 				BB1FA018D932C945AA4472E870F083C8 /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		14172CCCE3F00C497569D17D5C8ADBCB /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				7D037CD5A21E04174BDAF4D2EB3B598D /* .. */,
 			);
 			name = ..;
 			path = ..;
@@ -281,6 +308,24 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		1D69577BC26E203CF88A0D5A149A030A /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				A47BEF56B9E5FC3CF41C4398893900E9 /* .. */,
+			);
+			name = ..;
+			path = "../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ef1cacbe11f65c4a067a9afa22294adc85ce4a68/video_player/video_player_avfoundation/ios";
+			sourceTree = "<group>";
+		};
+		1E0206D3F1116B468756CCDB01B8AD39 /* video_player */ = {
+			isa = PBXGroup;
+			children = (
+				420AFBBB69E95541D6BAC2CE663D8E0D /* example */,
+			);
+			name = video_player;
+			path = video_player;
+			sourceTree = "<group>";
+		};
 		24B7FEA876DD88ABB67F35B69B58DA96 /* video_player */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,17 +344,6 @@
 			path = .symlinks;
 			sourceTree = "<group>";
 		};
-		26B6592F91AE8816A9D971F56ABA00D0 /* drm_video_player_avfoundation */ = {
-			isa = PBXGroup;
-			children = (
-				D2FB8EF0B2137F3D35FF93EAEC9B07DD /* .. */,
-				A9C23BE9F47B8356EB126DFE3ED53E90 /* Pod */,
-				B4C6B836804C9358ED74E648A7A4B32D /* Support Files */,
-			);
-			name = drm_video_player_avfoundation;
-			path = ../.symlinks/plugins/drm_video_player_avfoundation/ios;
-			sourceTree = "<group>";
-		};
 		2CDED2906AFC4B9E79F3BEEF8043531E /* Pods-Runner */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,31 +358,13 @@
 			path = "Target Support Files/Pods-Runner";
 			sourceTree = "<group>";
 		};
-		2E84F530B617373B2A6B03E189E7A10B /* ios */ = {
+		35DB15F4C2FD8E703DBD2B9D795A3B54 /* plugins */ = {
 			isa = PBXGroup;
 			children = (
-				F0B7089F828B8AC316B1919C4594FAD4 /* .symlinks */,
+				3FE37A1D9565C98E5186741E9520B5F6 /* drm_video_player_avfoundation */,
 			);
-			name = ios;
-			path = ios;
-			sourceTree = "<group>";
-		};
-		324C896BE43559A7B5AE0E98087ACB02 /* video_player_test */ = {
-			isa = PBXGroup;
-			children = (
-				A029E42ADAA4A0B96153786D3308BEAF /* video_player */,
-			);
-			name = video_player_test;
-			path = video_player_test;
-			sourceTree = "<group>";
-		};
-		338CEB70A09454ECC6FA4A70A91DAD4D /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				1136A0F4F90B4C9CE9076354CE5E0179 /* .. */,
-			);
-			name = ..;
-			path = ..;
+			name = plugins;
+			path = plugins;
 			sourceTree = "<group>";
 		};
 		388A2C86FF755910F9EA6E190E67524D /* Targets Support Files */ = {
@@ -362,7 +378,7 @@
 		395A2252E34A9CCC342A210206C448AA /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				26B6592F91AE8816A9D971F56ABA00D0 /* drm_video_player_avfoundation */,
+				B2CC7DE36B99D31B2EE94430933CA324 /* drm_video_player_avfoundation */,
 				F472D2E9BAAD585FDB7F814405FBEC68 /* Flutter */,
 				CD24BC3A9FD81A260794A078A3600CD4 /* integration_test */,
 				9AF0C34863ED1D552B60341D9BB80EA4 /* path_provider_ios */,
@@ -370,58 +386,77 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		39FE896E899C4A2D89A071DE81BC4DB6 /* .. */ = {
+		3C9ED181F0BD787BE42BD3163CAB5C6B /* FlutterSourceCode */ = {
 			isa = PBXGroup;
 			children = (
-				338CEB70A09454ECC6FA4A70A91DAD4D /* .. */,
+				BFD3A831124F15572ACA3BA01ED3B394 /* video_player_test */,
+			);
+			name = FlutterSourceCode;
+			path = FlutterSourceCode;
+			sourceTree = "<group>";
+		};
+		3FE37A1D9565C98E5186741E9520B5F6 /* drm_video_player_avfoundation */ = {
+			isa = PBXGroup;
+			children = (
+				0041CE98F526D4FAEC906385E26D39EA /* ios */,
+			);
+			name = drm_video_player_avfoundation;
+			path = drm_video_player_avfoundation;
+			sourceTree = "<group>";
+		};
+		40E1E8368568A713686B97DB6CD72933 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				75088FE3D3533F42E84B27DD4CE7053C /* .. */,
 			);
 			name = ..;
 			path = ..;
 			sourceTree = "<group>";
 		};
-		3C88D65DA3F37AEE3B400D9523135FCE /* .. */ = {
+		420AFBBB69E95541D6BAC2CE663D8E0D /* example */ = {
 			isa = PBXGroup;
 			children = (
-				5D3958D032810F0532F6CE28C0EF8996 /* FlutterSourceCode */,
-			);
-			name = ..;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		405EBD0396E88119F12BEA3565A1166F /* ios */ = {
-			isa = PBXGroup;
-			children = (
-				619DA78A8E3E467FDA76899BB80BCC85 /* Classes */,
-			);
-			name = ios;
-			path = ios;
-			sourceTree = "<group>";
-		};
-		4DD62344047F43AA2260740D42190B2E /* video_player */ = {
-			isa = PBXGroup;
-			children = (
-				572B3DC10B1B7D0AAA6CE4D728ED2373 /* example */,
-			);
-			name = video_player;
-			path = video_player;
-			sourceTree = "<group>";
-		};
-		572B3DC10B1B7D0AAA6CE4D728ED2373 /* example */ = {
-			isa = PBXGroup;
-			children = (
-				2E84F530B617373B2A6B03E189E7A10B /* ios */,
+				D9BB807A45B52354E8E47DC133FB67EE /* ios */,
 			);
 			name = example;
 			path = example;
 			sourceTree = "<group>";
 		};
-		5D3958D032810F0532F6CE28C0EF8996 /* FlutterSourceCode */ = {
+		43FE8D1C1E70703B4D4BB623417D7EE6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				324C896BE43559A7B5AE0E98087ACB02 /* video_player_test */,
+				AA201C654B0C1C61D0057252A755CC5F /* AVAssetTrackUtils.h */,
+				5A27A30504C8883ADD4AEC38EBA5DEB5 /* AVAssetTrackUtils.m */,
+				ECCED68539E4B49ED70E8071907E4C49 /* FLTVideoPlayerPlugin.h */,
+				A0D844E06ACF06E056C7F8DEB5891DB4 /* FLTVideoPlayerPlugin.m */,
+				E590056F6ABBE4F606482E6A5F13C978 /* messages.g.h */,
+				739FC0A3FD6BBC37676FA9178B73B972 /* messages.g.m */,
 			);
-			name = FlutterSourceCode;
-			path = FlutterSourceCode;
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		59BA4865F52C8DBBFDBDD57688E33457 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDA4DBA1DC66A43220F3C6725CCFD9DA /* drm_video_player_avfoundation.modulemap */,
+				A26307482D4443D0DE0AE59DC2B044BB /* drm_video_player_avfoundation-dummy.m */,
+				17DA1740EFAC7BB8215DB821EEDF6E3A /* drm_video_player_avfoundation-prefix.pch */,
+				7F25BEFDA86C05D644B983EBB057E78A /* drm_video_player_avfoundation-umbrella.h */,
+				EA3804BCD1CFEA2C9692F16FB08C0C3D /* drm_video_player_avfoundation.debug.xcconfig */,
+				394FBE6250775371A294D06E500D8D85 /* drm_video_player_avfoundation.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../../../Pods/Target Support Files/drm_video_player_avfoundation";
+			sourceTree = "<group>";
+		};
+		5A59D771BB2A8A5329B8F736E7DD96EC /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				CC73CDBD90121C1AECCBB1B7146F06F0 /* .. */,
+			);
+			name = ..;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		605FAE16AC1C2F3B76FE8493D1424BBB /* plugins */ = {
@@ -433,20 +468,6 @@
 			path = plugins;
 			sourceTree = "<group>";
 		};
-		619DA78A8E3E467FDA76899BB80BCC85 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				2158EEBBFD6F34F0CD9A513AD3A3E0D1 /* AVAssetTrackUtils.h */,
-				90E7DFF4BA0DDCE56EAA54E7EADBE37B /* AVAssetTrackUtils.m */,
-				076D61B73F4AE67820E2321B5FC40E37 /* FLTVideoPlayerPlugin.h */,
-				CDA1370C557680CBD2A191CB0AD1397B /* FLTVideoPlayerPlugin.m */,
-				B7EB76A76D57A0A9798469D3BD920E30 /* messages.g.h */,
-				CD8C32327A8398E664FDC4D3814F4754 /* messages.g.m */,
-			);
-			name = Classes;
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		61B30145E934B0FF831564D367BB63BE /* video_player */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,15 +475,6 @@
 			);
 			name = video_player;
 			path = video_player;
-			sourceTree = "<group>";
-		};
-		660F3A47254482C282B1027FF751EC00 /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				FDD71172CEED92900F7602BE7ABE7179 /* .. */,
-			);
-			name = ..;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		68196E5197643608425058DF987240E9 /* .. */ = {
@@ -483,22 +495,13 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		73270FF320B4811202E92B6AA7110C78 /* .. */ = {
+		75088FE3D3533F42E84B27DD4CE7053C /* .. */ = {
 			isa = PBXGroup;
 			children = (
-				39FE896E899C4A2D89A071DE81BC4DB6 /* .. */,
+				3C9ED181F0BD787BE42BD3163CAB5C6B /* FlutterSourceCode */,
 			);
 			name = ..;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		781D26085F0D2578B1B0E0BC8D3CF289 /* drm_video_player_avfoundation */ = {
-			isa = PBXGroup;
-			children = (
-				405EBD0396E88119F12BEA3565A1166F /* ios */,
-			);
-			name = drm_video_player_avfoundation;
-			path = drm_video_player_avfoundation;
 			sourceTree = "<group>";
 		};
 		7894EA7420BA422D91F6B6441EE79634 /* Support Files */ = {
@@ -527,6 +530,15 @@
 			);
 			name = "Support Files";
 			path = "../../../../Pods/Target Support Files/path_provider_ios";
+			sourceTree = "<group>";
+		};
+		7D037CD5A21E04174BDAF4D2EB3B598D /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				C8DFBB31B14F85757D8C85B90858DB28 /* .. */,
+			);
+			name = ..;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		7ED93BEEB6C17886FABBAB57AF9250FB /* .. */ = {
@@ -565,15 +577,6 @@
 			path = ios;
 			sourceTree = "<group>";
 		};
-		877E67A6E28E4FC818A1EFF623C095C7 /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				73270FF320B4811202E92B6AA7110C78 /* .. */,
-			);
-			name = ..;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		8783107E2874370BD1EBB88A0DE22C5A /* FlutterSourceCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,15 +602,6 @@
 			);
 			name = example;
 			path = example;
-			sourceTree = "<group>";
-		};
-		95DC9DC343DD0CF9C88E36EAEF93FD61 /* plugins */ = {
-			isa = PBXGroup;
-			children = (
-				781D26085F0D2578B1B0E0BC8D3CF289 /* drm_video_player_avfoundation */,
-			);
-			name = plugins;
-			path = plugins;
 			sourceTree = "<group>";
 		};
 		9946DBA7E058A3ECBD21A9D9FAADB66C /* Pod */ = {
@@ -638,13 +632,13 @@
 			path = "../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.11/ios";
 			sourceTree = "<group>";
 		};
-		A029E42ADAA4A0B96153786D3308BEAF /* video_player */ = {
+		A47BEF56B9E5FC3CF41C4398893900E9 /* .. */ = {
 			isa = PBXGroup;
 			children = (
-				4DD62344047F43AA2260740D42190B2E /* video_player */,
+				E0F16FE34B35BC74882AE06D04483792 /* .. */,
 			);
-			name = video_player;
-			path = video_player;
+			name = ..;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A99DE516EF9B564CFA86D7F1B5ED0D8B /* ios */ = {
@@ -656,13 +650,13 @@
 			path = ios;
 			sourceTree = "<group>";
 		};
-		A9C23BE9F47B8356EB126DFE3ED53E90 /* Pod */ = {
+		AC18B0BC338CEB7312870D5C50DB2977 /* video_player */ = {
 			isa = PBXGroup;
 			children = (
-				42F99BD226A0619D2E29CB6246197068 /* drm_video_player_avfoundation.podspec */,
-				91EE860E4F0C5DDC0569DB6BC459DBA3 /* LICENSE */,
+				1E0206D3F1116B468756CCDB01B8AD39 /* video_player */,
 			);
-			name = Pod;
+			name = video_player;
+			path = video_player;
 			sourceTree = "<group>";
 		};
 		ADD6FDD97D9B7B44582B0780021D63D3 /* .. */ = {
@@ -674,18 +668,24 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		B4C6B836804C9358ED74E648A7A4B32D /* Support Files */ = {
+		B2CC7DE36B99D31B2EE94430933CA324 /* drm_video_player_avfoundation */ = {
 			isa = PBXGroup;
 			children = (
-				479EB532CC409048E629B3552132AA1D /* drm_video_player_avfoundation.modulemap */,
-				55A55087AE5242EDC5FCCB78F7E205B7 /* drm_video_player_avfoundation-dummy.m */,
-				AB1C2984069CC73D85677A5AD6843283 /* drm_video_player_avfoundation-prefix.pch */,
-				7D42FEE7499C2EFE7466B46FE7CE18D4 /* drm_video_player_avfoundation-umbrella.h */,
-				251BCB02BC9AE524E4C6D766512A5FE4 /* drm_video_player_avfoundation.debug.xcconfig */,
-				AB02D5FEA78E8A1C3B7154AA85FBDF9C /* drm_video_player_avfoundation.release.xcconfig */,
+				1D69577BC26E203CF88A0D5A149A030A /* .. */,
+				113AFA85AA5B15FF2361E188D51FB9B2 /* Pod */,
+				59BA4865F52C8DBBFDBDD57688E33457 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../../../../Pods/Target Support Files/drm_video_player_avfoundation";
+			name = drm_video_player_avfoundation;
+			path = ../.symlinks/plugins/drm_video_player_avfoundation/ios;
+			sourceTree = "<group>";
+		};
+		B60741834635153F03C16147A2F70A95 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				40E1E8368568A713686B97DB6CD72933 /* .. */,
+			);
+			name = ..;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		BB1FA018D932C945AA4472E870F083C8 /* .. */ = {
@@ -697,13 +697,13 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		C309852D6B97BEA6AF409F636FBAE549 /* .. */ = {
+		BFD3A831124F15572ACA3BA01ED3B394 /* video_player_test */ = {
 			isa = PBXGroup;
 			children = (
-				D933EB8A6777DD154BC781CD92EA3C3A /* .. */,
+				AC18B0BC338CEB7312870D5C50DB2977 /* video_player */,
 			);
-			name = ..;
-			path = ..;
+			name = video_player_test;
+			path = video_player_test;
 			sourceTree = "<group>";
 		};
 		C54B3FC947262D816B3089EC12FA9ECD /* .symlinks */ = {
@@ -734,6 +734,24 @@
 			path = video_player_test;
 			sourceTree = "<group>";
 		};
+		C8DFBB31B14F85757D8C85B90858DB28 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				B60741834635153F03C16147A2F70A95 /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CC73CDBD90121C1AECCBB1B7146F06F0 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				14172CCCE3F00C497569D17D5C8ADBCB /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		CD24BC3A9FD81A260794A078A3600CD4 /* integration_test */ = {
 			isa = PBXGroup;
 			children = (
@@ -762,15 +780,6 @@
 				C9DCE25D304F2234C105644F2BB445CA /* integration_test.podspec */,
 			);
 			name = Pod;
-			sourceTree = "<group>";
-		};
-		D2FB8EF0B2137F3D35FF93EAEC9B07DD /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				C309852D6B97BEA6AF409F636FBAE549 /* .. */,
-			);
-			name = ..;
-			path = "../../../../../../../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_avfoundation/ios";
 			sourceTree = "<group>";
 		};
 		D35FFE8250440B6BF5E0D61B0057EB69 /* .. */ = {
@@ -807,13 +816,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D933EB8A6777DD154BC781CD92EA3C3A /* .. */ = {
+		D9BB807A45B52354E8E47DC133FB67EE /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				877E67A6E28E4FC818A1EFF623C095C7 /* .. */,
+				04AEEF0EA5EBF1A7A56395403641A2B1 /* .symlinks */,
 			);
-			name = ..;
-			path = ..;
+			name = ios;
+			path = ios;
 			sourceTree = "<group>";
 		};
 		D9EA8FF264EF0B4A95A63F873B63CD8C /* video_player */ = {
@@ -852,6 +861,15 @@
 			path = video_player;
 			sourceTree = "<group>";
 		};
+		E0F16FE34B35BC74882AE06D04483792 /* .. */ = {
+			isa = PBXGroup;
+			children = (
+				5A59D771BB2A8A5329B8F736E7DD96EC /* .. */,
+			);
+			name = ..;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		E1B0BB6CEFEF9C20F2C1C15F9E2A7034 /* integration_test */ = {
 			isa = PBXGroup;
 			children = (
@@ -880,15 +898,6 @@
 			);
 			name = ..;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		F0B7089F828B8AC316B1919C4594FAD4 /* .symlinks */ = {
-			isa = PBXGroup;
-			children = (
-				95DC9DC343DD0CF9C88E36EAEF93FD61 /* plugins */,
-			);
-			name = .symlinks;
-			path = .symlinks;
 			sourceTree = "<group>";
 		};
 		F15155917ACBAF84EACA5B15D3BC7CF0 /* .. */ = {
@@ -937,15 +946,6 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		FDD71172CEED92900F7602BE7ABE7179 /* .. */ = {
-			isa = PBXGroup;
-			children = (
-				3C88D65DA3F37AEE3B400D9523135FCE /* .. */,
-			);
-			name = ..;
-			path = ..;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -971,10 +971,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F167B85CAEC2BE60A764818FCF850E62 /* AVAssetTrackUtils.h in Headers */,
+				E628117EB772556286E2526FB719FC98 /* AVAssetTrackUtils.h in Headers */,
 				1B85838DE4E95EAC79396D5C3CCD6275 /* drm_video_player_avfoundation-umbrella.h in Headers */,
-				25FBA12BDD60208F83CDEE5F57D15287 /* FLTVideoPlayerPlugin.h in Headers */,
-				6DD10839DD809C1E21E055538CF5AB10 /* messages.g.h in Headers */,
+				3DCC0B66EAD43EE615EFDA3513884C13 /* FLTVideoPlayerPlugin.h in Headers */,
+				BAF4B68596BB8E360ED335C8038475E8 /* messages.g.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1113,10 +1113,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0C4C5D77F553648F9EB39959DC658DA /* AVAssetTrackUtils.m in Sources */,
+				B75B97C357830A25037D834E98B5441D /* AVAssetTrackUtils.m in Sources */,
 				C849C488D41EFDFEE6CD5B68E1ADD6B4 /* drm_video_player_avfoundation-dummy.m in Sources */,
-				BA6923F11BD6BE489CD26BE6C24344BC /* FLTVideoPlayerPlugin.m in Sources */,
-				2ED1F655ECE8F0FD05EFA41BEC91EF3A /* messages.g.m in Sources */,
+				A3E3A7777DC6D1D82AAAD4DEAE1EAB5E /* FLTVideoPlayerPlugin.m in Sources */,
+				D450A4C7CAEA06D072F06E939C2D3DB3 /* messages.g.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1284,7 +1284,7 @@
 		};
 		2827462793C8765AF5548BC8DCF42087 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 251BCB02BC9AE524E4C6D766512A5FE4 /* drm_video_player_avfoundation.debug.xcconfig */;
+			baseConfigurationReference = EA3804BCD1CFEA2C9692F16FB08C0C3D /* drm_video_player_avfoundation.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1362,7 +1362,7 @@
 		};
 		61AA7F31078D4D2256DCEE62AC9CAA1D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB02D5FEA78E8A1C3B7154AA85FBDF9C /* drm_video_player_avfoundation.release.xcconfig */;
+			baseConfigurationReference = 394FBE6250775371A294D06E500D8D85 /* drm_video_player_avfoundation.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1463,7 +1463,7 @@
 		};
 		90F5AFB49EB0C13A97EDF9AB592037F5 /* Profile */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB02D5FEA78E8A1C3B7154AA85FBDF9C /* drm_video_player_avfoundation.release.xcconfig */;
+			baseConfigurationReference = 394FBE6250775371A294D06E500D8D85 /* drm_video_player_avfoundation.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

@@ -9,17 +9,17 @@ import 'dart:math' as math;
 import 'dart:typed_data';
 
 import 'package:convert/convert.dart';
+import 'package:drm_video_player_platform_interface/video_player_platform_interface.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pointycastle/api.dart' as pointycastleapi;
 import 'package:pointycastle/digests/sha1.dart';
 import 'package:pointycastle/macs/hmac.dart';
-import 'package:video_player_platform_interface/video_player_platform_interface.dart';
 
 import 'src/closed_caption_file.dart';
 
-export 'package:video_player_platform_interface/video_player_platform_interface.dart'
+export 'package:drm_video_player_platform_interface/video_player_platform_interface.dart'
     show
         DurationRange,
         DataSourceType,

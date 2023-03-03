@@ -35,26 +35,26 @@ dependencies:
     # path: ../video_player_web
 
   # use this for github path.
-  video_player_platform_interface:
+  drm_video_player_platform_interface:
     git:
       url: https://github.com/parthkalariyadev/video_player_test.git
       path: video_player/video_player_platform_interface
-      ref: 6726f8c00c3f03b760f512dcbdf696fd95094ef0
+      ref: 026745b11281320bc97be020dc0f38f7d99ba849
   drm_video_player_android:
     git:
       url: https://github.com/parthkalariyadev/video_player_test.git
       path: video_player/video_player_android
-      ref: ccf5e0134cadd9e92326080a4af5b8107bf7f446
+      ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
   drm_video_player_avfoundation:
     git:
       url: https://github.com/parthkalariyadev/video_player_test.git
       path: video_player/video_player_avfoundation
-      ref: ccf5e0134cadd9e92326080a4af5b8107bf7f446
+      ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
   drm_video_player_web:
     git:
       url: https://github.com/parthkalariyadev/video_player_test.git
       path: video_player/video_player_web
-      ref: ccf5e0134cadd9e92326080a4af5b8107bf7f446
+      ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
 
   pointycastle: ^3.6.2
   convert: ^3.1.0
