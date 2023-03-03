@@ -4,10 +4,10 @@
 
 import 'dart:async';
 
+import 'package:drm_video_player_web/src/shaka_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:video_player_platform_interface/video_player_platform_interface.dart';
-import 'package:video_player_web/src/shaka_video_player.dart';
 
 import 'src/shims/dart_ui.dart' as ui;
 import 'src/video_player.dart';
@@ -66,9 +66,11 @@ class VideoPlayerPlugin extends VideoPlayerPlatform {
         uri = assetUrl;
         break;
       case DataSourceType.file:
-        return Future<int>.error(UnimplementedError('web implementation of video_player cannot play local files'));
+        return Future<int>.error(UnimplementedError(
+            'web implementation of video_player cannot play local files'));
       case DataSourceType.contentUri:
-        return Future<int>.error(UnimplementedError('web implementation of video_player cannot play content uri'));
+        return Future<int>.error(UnimplementedError(
+            'web implementation of video_player cannot play content uri'));
     }
 
     final VideoPlayer player = ShakaVideoPlayer(

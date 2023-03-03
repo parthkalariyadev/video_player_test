@@ -158,13 +158,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "video_player_web",
+      "name": "drm_video_player_web",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2023-03-02T13:34:24.956516Z",
+  "generated": "2023-03-03T05:08:01.637564Z",
   "generator": "pub",
   "generatorVersion": "2.18.4"
 }

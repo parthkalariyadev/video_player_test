@@ -12,6 +12,9 @@
       <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/video_player_avfoundation/build" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/video_player_avfoundation/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/video_player_avfoundation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/drm_video_player_avfoundation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/drm_video_player_avfoundation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/drm_video_player_avfoundation/.pub" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

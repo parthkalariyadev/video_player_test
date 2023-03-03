@@ -5,10 +5,10 @@
 import 'dart:async';
 import 'dart:html' as html;
 
+import 'package:drm_video_player_web/src/video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:video_player_platform_interface/video_player_platform_interface.dart';
-import 'package:video_player_web/src/video_player.dart';
 
 import '../src/shims/dart_ui.dart' as ui;
 
@@ -32,7 +32,8 @@ const Map<int, String> _kErrorValueToErrorDescription = <int, String>{
 
 // The default error message, when the error is an empty string
 // See: https://developer.mozilla.org/en-US/docs/Web/API/MediaError/message
-const String _kDefaultErrorMessage = 'No further diagnostic information can be determined or provided.';
+const String _kDefaultErrorMessage =
+    'No further diagnostic information can be determined or provided.';
 
 abstract class VideoElementPlayer implements VideoPlayer {
   /// Create a [VideoElementPlayer] from a [html.VideoElement] instance.
@@ -70,7 +71,8 @@ abstract class VideoElementPlayer implements VideoPlayer {
     _videoElement = createElement(textureId);
 
     // TODO(hterkelsen): Use initialization parameters once they are available
-    ui.platformViewRegistry.registerViewFactory(_videoElement.id, (int viewId) => _videoElement);
+    ui.platformViewRegistry
+        .registerViewFactory(_videoElement.id, (int viewId) => _videoElement);
   }
 
   @protected
@@ -246,7 +248,9 @@ abstract class VideoElementPlayer implements VideoPlayer {
     if (_isBuffering != buffering) {
       _isBuffering = buffering;
       _eventController.add(VideoEvent(
-        eventType: _isBuffering ? VideoEventType.bufferingStart : VideoEventType.bufferingEnd,
+        eventType: _isBuffering
+            ? VideoEventType.bufferingStart
+            : VideoEventType.bufferingEnd,
       ));
     }
   }

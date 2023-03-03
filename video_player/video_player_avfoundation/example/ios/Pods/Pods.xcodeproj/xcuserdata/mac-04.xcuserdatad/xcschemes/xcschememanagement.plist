@@ -9,17 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>OCMock.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Runner.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-RunnerTests.xcscheme</key>
+		<key>drm_video_player_avfoundation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -30,11 +25,6 @@
 			<false/>
 		</dict>
 		<key>path_provider_ios.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>video_player_avfoundation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

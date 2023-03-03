@@ -224,13 +224,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "video_player_android",
+      "name": "drm_video_player_android",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     }
   ],
-  "generated": "2023-03-02T13:33:45.554103Z",
+  "generated": "2023-03-03T05:04:10.433323Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }

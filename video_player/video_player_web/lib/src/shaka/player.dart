@@ -7,9 +7,9 @@ library shaka;
 
 import 'dart:html' as html;
 
+import 'package:drm_video_player_web/src/shaka/networking_engine.dart';
 // ignore: depend_on_referenced_packages
 import 'package:js/js.dart';
-import 'package:video_player_web/src/shaka/networking_engine.dart';
 
 @JS()
 class Player {

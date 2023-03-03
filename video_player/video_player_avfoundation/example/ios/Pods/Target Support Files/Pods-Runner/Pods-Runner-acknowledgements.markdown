@@ -1,12 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## integration_test
-
-Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
-
-
-## path_provider_ios
+## drm_video_player_avfoundation
 
 Copyright 2013 The Flutter Authors. All rights reserved.
 
@@ -35,7 +30,12 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-## video_player_avfoundation
+## integration_test
+
+Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
+
+
+## path_provider_ios
 
 Copyright 2013 The Flutter Authors. All rights reserved.
 

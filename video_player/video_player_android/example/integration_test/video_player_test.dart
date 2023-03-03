@@ -10,7 +10,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:video_player_android/video_player_android.dart';
+import 'package:video_player_android/drm_video_player_android.dart';
 // TODO(stuartmorgan): Remove the use of MiniController in tests, as that is
 // testing test code; tests should instead be written directly against the
 // platform interface. (These tests were copied from the app-facing package

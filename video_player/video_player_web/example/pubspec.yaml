@@ -8,7 +8,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  video_player_web:
+  drm_video_player_web:
     path: ../
 
 dev_dependencies:

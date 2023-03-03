@@ -298,7 +298,7 @@ integration_test
 2.12
 file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/packages/integration_test/
 file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/packages/integration_test/lib/
-video_player_android
+drm_video_player_android
 2.14
 file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_android/
 file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_android/lib/

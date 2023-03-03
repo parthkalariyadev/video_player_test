@@ -8,8 +8,8 @@ library shaka;
 // ignore: depend_on_referenced_packages
 import 'package:js/js.dart';
 
-export 'package:video_player_web/src/shaka/error.dart';
-export 'package:video_player_web/src/shaka/networking_engine.dart';
-export 'package:video_player_web/src/shaka/player.dart';
-export 'package:video_player_web/src/shaka/request.dart';
-export 'package:video_player_web/src/shaka/utils.dart';
+export 'package:drm_video_player_web/src/shaka/error.dart';
+export 'package:drm_video_player_web/src/shaka/networking_engine.dart';
+export 'package:drm_video_player_web/src/shaka/player.dart';
+export 'package:drm_video_player_web/src/shaka/request.dart';
+export 'package:drm_video_player_web/src/shaka/utils.dart';

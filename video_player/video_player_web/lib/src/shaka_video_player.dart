@@ -7,14 +7,15 @@ import 'dart:html' as html;
 import 'dart:js';
 import 'dart:js_util';
 
+import 'package:drm_video_player_web/src/shaka/shaka.dart' as shaka;
+import 'package:drm_video_player_web/src/utils.dart';
+import 'package:drm_video_player_web/src/video_element_player.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:video_player_platform_interface/video_player_platform_interface.dart';
-import 'package:video_player_web/src/shaka/shaka.dart' as shaka;
-import 'package:video_player_web/src/utils.dart';
-import 'package:video_player_web/src/video_element_player.dart';
 
-const String _kMuxScriptUrl = 'https://cdnjs.cloudflare.com/ajax/libs/mux.js/5.10.0/mux.min.js';
+const String _kMuxScriptUrl =
+    'https://cdnjs.cloudflare.com/ajax/libs/mux.js/5.10.0/mux.min.js';
 const String _kShakaScriptUrl = kReleaseMode
     ? 'https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.0/shaka-player.compiled.min.js'
     : 'https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.0/shaka-player.compiled.debug.js';
@@ -106,10 +107,14 @@ class ShakaVideoPlayer extends VideoElementPlayer {
           );
         }
 
-        _player.getNetworkingEngine().registerRequestFilter(allowInterop((type, request) {
+        _player
+            .getNetworkingEngine()
+            .registerRequestFilter(allowInterop((type, request) {
           request.allowCrossSiteCredentials = _withCredentials;
 
-          if (type == shaka.RequestType.license && _hasDrm && _drmHttpHeaders?.isNotEmpty == true) {
+          if (type == shaka.RequestType.license &&
+              _hasDrm &&
+              _drmHttpHeaders?.isNotEmpty == true) {
             request.headers = jsify(_drmHttpHeaders!);
           }
         }));
@@ -119,7 +124,8 @@ class ShakaVideoPlayer extends VideoElementPlayer {
         _onShakaPlayerError(ex);
       }
     } else {
-      throw UnsupportedError('web implementation of video_player does not support your browser');
+      throw UnsupportedError(
+          'web implementation of video_player does not support your browser');
     }
   }
 

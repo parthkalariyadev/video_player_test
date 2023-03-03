@@ -142,7 +142,7 @@ integration_test
 2.12
 file:///Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/packages/integration_test/
 file:///Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/packages/integration_test/lib/
-video_player_web
+drm_video_player_web
 2.12
 file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_web/
 file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_web/lib/

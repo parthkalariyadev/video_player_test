@@ -224,13 +224,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "video_player_avfoundation",
+      "name": "drm_video_player_avfoundation",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     }
   ],
-  "generated": "2023-03-02T13:34:41.316988Z",
+  "generated": "2023-03-03T05:54:50.516690Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
