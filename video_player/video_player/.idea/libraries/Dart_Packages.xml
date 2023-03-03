@@ -134,6 +134,13 @@
             </list>
           </value>
         </entry>
+        <entry key="drm_video_player_platform_interface">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-026745b11281320bc97be020dc0f38f7d99ba849/video_player/video_player_platform_interface/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="drm_video_player_web">
           <value>
             <list>
@@ -575,8 +582,8 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.1/lib" />
-              <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.0/lib" />
               <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.0/lib" />
             </list>
           </value>
         </entry>
@@ -663,6 +670,7 @@
       </option>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-026745b11281320bc97be020dc0f38f7d99ba849/video_player/video_player_platform_interface/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-6726f8c00c3f03b760f512dcbdf696fd95094ef0/video_player/video_player_platform_interface/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-31.0.0/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/hosted/pub.dartlang.org/analyzer-2.8.0/lib" />

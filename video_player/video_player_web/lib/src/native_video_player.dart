@@ -5,9 +5,9 @@
 import 'dart:async';
 import 'dart:html' as html;
 
+import 'package:drm_video_player_platform_interface/video_player_platform_interface.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:video_player_platform_interface/video_player_platform_interface.dart';
 
 // An error code value to error name Map.
 // See: https://developer.mozilla.org/en-US/docs/Web/API/MediaError/code

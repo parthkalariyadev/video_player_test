@@ -5716,9 +5716,9 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------------
+drm_video_player_platform_interface
 drm_video_player_web
 plugin_platform_interface
-video_player_platform_interface
 
 Copyright 2013 The Flutter Authors. All rights reserved.
 

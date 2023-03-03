@@ -51,6 +51,13 @@
             </list>
           </value>
         </entry>
+        <entry key="drm_video_player_platform_interface">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-026745b11281320bc97be020dc0f38f7d99ba849/video_player/video_player_platform_interface/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="fake_async">
           <value>
             <list>
@@ -247,13 +254,6 @@
             </list>
           </value>
         </entry>
-        <entry key="video_player_platform_interface">
-          <value>
-            <list>
-              <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-6726f8c00c3f03b760f512dcbdf696fd95094ef0/video_player/video_player_platform_interface/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="vm_service">
           <value>
             <list>
@@ -271,7 +271,7 @@
       </option>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-6726f8c00c3f03b760f512dcbdf696fd95094ef0/video_player/video_player_platform_interface/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-026745b11281320bc97be020dc0f38f7d99ba849/video_player/video_player_platform_interface/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.3.0/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.9.0/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0/lib" />

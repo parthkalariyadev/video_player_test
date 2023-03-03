@@ -7,12 +7,12 @@ import 'dart:html' as html;
 import 'dart:js';
 import 'dart:js_util';
 
+import 'package:drm_video_player_platform_interface/video_player_platform_interface.dart';
 import 'package:drm_video_player_web/src/shaka/shaka.dart' as shaka;
 import 'package:drm_video_player_web/src/utils.dart';
 import 'package:drm_video_player_web/src/video_element_player.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:video_player_platform_interface/video_player_platform_interface.dart';
 
 const String _kMuxScriptUrl =
     'https://cdnjs.cloudflare.com/ajax/libs/mux.js/5.10.0/mux.min.js';
