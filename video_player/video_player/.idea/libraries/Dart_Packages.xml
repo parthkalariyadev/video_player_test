@@ -120,6 +120,27 @@
             </list>
           </value>
         </entry>
+        <entry key="drm_video_player_android">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_android/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="drm_video_player_avfoundation">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_avfoundation/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="drm_video_player_web">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_web/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="fake_async">
           <value>
             <list>
@@ -567,32 +588,11 @@
             </list>
           </value>
         </entry>
-        <entry key="video_player_android">
-          <value>
-            <list>
-              <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-4fc434e1e3a732e932e2aa53e53999065f8516f0/video_player/video_player_android/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="video_player_avfoundation">
-          <value>
-            <list>
-              <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-4fc434e1e3a732e932e2aa53e53999065f8516f0/video_player/video_player_avfoundation/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="video_player_platform_interface">
           <value>
             <list>
               <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-6726f8c00c3f03b760f512dcbdf696fd95094ef0/video_player/video_player_platform_interface/lib" />
               <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-6726f8c00c3f03b760f512dcbdf696fd95094ef0/video_player/video_player_platform_interface/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="video_player_web">
-          <value>
-            <list>
-              <option value="$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-4fc434e1e3a732e932e2aa53e53999065f8516f0/video_player/video_player_web/lib" />
             </list>
           </value>
         </entry>
@@ -742,10 +742,10 @@
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/packages/flutter_test/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/packages/fuchsia_remote_debug_protocol/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v2.10.5/flutter/packages/integration_test/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-4fc434e1e3a732e932e2aa53e53999065f8516f0/video_player/video_player_android/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-4fc434e1e3a732e932e2aa53e53999065f8516f0/video_player/video_player_avfoundation/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-4fc434e1e3a732e932e2aa53e53999065f8516f0/video_player/video_player_web/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-6726f8c00c3f03b760f512dcbdf696fd95094ef0/video_player/video_player_platform_interface/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_android/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_avfoundation/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ccf5e0134cadd9e92326080a4af5b8107bf7f446/video_player/video_player_web/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-47.0.0/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/analyzer-4.7.0/lib" />
       <root url="file://$PROJECT_DIR$/../../../../Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.3.0/lib" />

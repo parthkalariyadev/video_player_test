@@ -98,7 +98,7 @@ flutter_test
 2.12
 file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/packages/flutter_test/
 file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/packages/flutter_test/lib/
-video_player_platform_interface
+drm_video_player_platform_interface
 2.12
 file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_platform_interface/
 file:///Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_platform_interface/lib/
