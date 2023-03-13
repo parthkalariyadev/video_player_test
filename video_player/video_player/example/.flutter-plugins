@@ -1,8 +1,8 @@
 # This is a generated file; do not edit or check into version control.
 drm_video_player=/Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/
-drm_video_player_android=/Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ef1cacbe11f65c4a067a9afa22294adc85ce4a68/video_player/video_player_android/
-drm_video_player_avfoundation=/Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ef1cacbe11f65c4a067a9afa22294adc85ce4a68/video_player/video_player_avfoundation/
-drm_video_player_web=/Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/.pub-cache/git/video_player_test-ef1cacbe11f65c4a067a9afa22294adc85ce4a68/video_player/video_player_web/
+drm_video_player_android=/Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_android/
+drm_video_player_avfoundation=/Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_avfoundation/
+drm_video_player_web=/Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player_web/
 integration_test=/Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/packages/integration_test/
 path_provider=/Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.11/
 path_provider_android=/Volumes/Workspace/Flutter/SDKs/v3.3.8/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.0.22/

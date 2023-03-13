@@ -93,7 +93,7 @@
     },
     {
       "name": "drm_video_player_platform_interface",
-      "rootUri": "file:///Volumes/Workspace/Flutter/SDKs/v2.10.5/flutter/.pub-cache/git/video_player_test-026745b11281320bc97be020dc0f38f7d99ba849/video_player/video_player_platform_interface",
+      "rootUri": "../../../video_player_platform_interface",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -464,7 +464,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2023-03-03T06:28:33.184633Z",
+  "generated": "2023-03-13T10:13:17.802940Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }

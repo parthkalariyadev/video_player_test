@@ -53,38 +53,30 @@ packages:
   drm_video_player_android:
     dependency: "direct main"
     description:
-      path: "video_player/video_player_android"
-      ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
-      resolved-ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
-      url: "https://github.com/parthkalariyadev/video_player_test.git"
-    source: git
+      path: "../video_player_android"
+      relative: true
+    source: path
     version: "2.3.6"
   drm_video_player_avfoundation:
     dependency: "direct main"
     description:
-      path: "video_player/video_player_avfoundation"
-      ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
-      resolved-ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
-      url: "https://github.com/parthkalariyadev/video_player_test.git"
-    source: git
+      path: "../video_player_avfoundation"
+      relative: true
+    source: path
     version: "2.3.5"
   drm_video_player_platform_interface:
     dependency: "direct main"
     description:
-      path: "video_player/video_player_platform_interface"
-      ref: "026745b11281320bc97be020dc0f38f7d99ba849"
-      resolved-ref: "026745b11281320bc97be020dc0f38f7d99ba849"
-      url: "https://github.com/parthkalariyadev/video_player_test.git"
-    source: git
+      path: "../video_player_platform_interface"
+      relative: true
+    source: path
     version: "5.1.3"
   drm_video_player_web:
     dependency: "direct main"
     description:
-      path: "video_player/video_player_web"
-      ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
-      resolved-ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
-      url: "https://github.com/parthkalariyadev/video_player_test.git"
-    source: git
+      path: "../video_player_web"
+      relative: true
+    source: path
     version: "2.0.10"
   fake_async:
     dependency: transitive

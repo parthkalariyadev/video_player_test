@@ -25,36 +25,36 @@ dependencies:
   html: ^0.15.0
 
   # use this for local path.
-  # video_player_platform_interface:
-    # path: ../video_player_platform_interface
-  # video_player_android:
-    # path: ../video_player_android
-  # video_player_avfoundation:
-    # path: ../video_player_avfoundation
-  # video_player_web:
-    # path: ../video_player_web
+  drm_video_player_platform_interface:
+    path: ../video_player_platform_interface
+  drm_video_player_android:
+    path: ../video_player_android
+  drm_video_player_avfoundation:
+    path: ../video_player_avfoundation
+  drm_video_player_web:
+    path: ../video_player_web
 
   # use this for github path.
-  drm_video_player_platform_interface:
-    git:
-      url: https://github.com/parthkalariyadev/video_player_test.git
-      path: video_player/video_player_platform_interface
-      ref: 026745b11281320bc97be020dc0f38f7d99ba849
-  drm_video_player_android:
-    git:
-      url: https://github.com/parthkalariyadev/video_player_test.git
-      path: video_player/video_player_android
-      ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
-  drm_video_player_avfoundation:
-    git:
-      url: https://github.com/parthkalariyadev/video_player_test.git
-      path: video_player/video_player_avfoundation
-      ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
-  drm_video_player_web:
-    git:
-      url: https://github.com/parthkalariyadev/video_player_test.git
-      path: video_player/video_player_web
-      ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
+#  drm_video_player_platform_interface:
+#    git:
+#      url: https://github.com/parthkalariyadev/video_player_test.git
+#      path: video_player/video_player_platform_interface
+#      ref: 026745b11281320bc97be020dc0f38f7d99ba849
+#  drm_video_player_android:
+#    git:
+#      url: https://github.com/parthkalariyadev/video_player_test.git
+#      path: video_player/video_player_android
+#      ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
+#  drm_video_player_avfoundation:
+#    git:
+#      url: https://github.com/parthkalariyadev/video_player_test.git
+#      path: video_player/video_player_avfoundation
+#      ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
+#  drm_video_player_web:
+#    git:
+#      url: https://github.com/parthkalariyadev/video_player_test.git
+#      path: video_player/video_player_web
+#      ref: ef1cacbe11f65c4a067a9afa22294adc85ce4a68
 
   pointycastle: ^3.6.2
   convert: ^3.1.0
