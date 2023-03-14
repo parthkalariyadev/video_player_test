@@ -23,32 +23,41 @@ const String _kShakaScriptUrl = kReleaseMode
 class ShakaVideoPlayer extends VideoElementPlayer {
   ShakaVideoPlayer({
     required String src,
-    String? drmType,
-    String? drmUriLicense,
+    /*String? drmType,*/
+    /*String? drmUriLicense,*/
+    String? widevineDrmUriLicense,
+    String? fairplayDrmUriLicense,
     Map<String, String>? drmHttpHeaders,
     bool withCredentials = false,
     @visibleForTesting StreamController<VideoEvent>? eventController,
-  })  : _drmType = drmType,
-        _drmUriLicense = drmUriLicense,
+  })  : /*_drmType = drmType,*/
+        /*_drmUriLicense = drmUriLicense,*/
+        _widevineDrmUriLicense = widevineDrmUriLicense,
+        _fairplayDrmUriLicense = fairplayDrmUriLicense,
         _drmHttpHeaders = drmHttpHeaders,
         _withCredentials = withCredentials,
         super(src: src, eventController: eventController);
 
   late shaka.Player _player;
 
-  final String? _drmType;
-  final String? _drmUriLicense;
+  /*final String? _drmType;*/
+  /*final String? _drmUriLicense;*/
+  final String? _widevineDrmUriLicense;
+  final String? _fairplayDrmUriLicense;
   final Map<String, String>? _drmHttpHeaders;
   final bool _withCredentials;
 
-  bool get _hasDrm => _drmType != null && _drmUriLicense != null;
+  /*bool get _hasDrm => _drmType != null && _drmUriLicense != null;*/
+  bool get _hasDrmWidevine => _widevineDrmUriLicense != null;
+  bool get _hasDrmFairplay => _fairplayDrmUriLicense != null;
 
+  // TODO: Need to change in this method.
   String get _drmServer {
-    if (_drmType == VideoDrmType.widevine) {
-      return 'com.widevine.alpha';
-    }
+    /*if (_drmType == VideoDrmType.widevine) {*/
+    return 'com.widevine.alpha';
+    /*}
 
-    return _drmType!;
+    return _drmType!;*/
   }
 
   @override
@@ -97,11 +106,11 @@ class ShakaVideoPlayer extends VideoElementPlayer {
       setupListeners();
 
       try {
-        if (_hasDrm) {
+        if (_hasDrmWidevine) {
           _player.configure(
             jsify({
               "drm": {
-                "servers": {_drmServer: _drmUriLicense!}
+                "servers": {_drmServer: _widevineDrmUriLicense!}
               }
             }),
           );
@@ -113,7 +122,7 @@ class ShakaVideoPlayer extends VideoElementPlayer {
           request.allowCrossSiteCredentials = _withCredentials;
 
           if (type == shaka.RequestType.license &&
-              _hasDrm &&
+              _hasDrmWidevine &&
               _drmHttpHeaders?.isNotEmpty == true) {
             request.headers = jsify(_drmHttpHeaders!);
           }

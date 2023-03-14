@@ -75,8 +75,10 @@ class VideoPlayerPlugin extends VideoPlayerPlatform {
 
     final VideoPlayer player = ShakaVideoPlayer(
       src: uri,
-      drmType: dataSource.drmDataSource?.type,
-      drmUriLicense: dataSource.drmDataSource?.uriLicense,
+      /*drmType: dataSource.drmDataSource?.type,*/
+      /*drmUriLicense: dataSource.drmDataSource?.uriLicense,*/
+      widevineDrmUriLicense: dataSource.drmDataSource?.widevineDrmUriLicense,
+      fairplayDrmUriLicense: dataSource.drmDataSource?.fairplayDrmUriLicense,
       drmHttpHeaders: dataSource.drmDataSource?.httpHeaders,
       withCredentials: dataSource.withCredentials,
     );

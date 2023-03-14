@@ -232,9 +232,12 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         dataSourceType = DataSourceType.asset,
         formatHint = null,
         httpHeaders = const <String, String>{},
-        drmType = null,
-        licenseProxyURL = null,
-        proxyURLSigningSecret = null,
+        /*drmType = null,*/
+        widevineLicenseProxyURL = null,
+        widevineProxyURLSigningSecret = null,
+        fairplayLicenseProxyURL = null,
+        fairplayProxyURLSigningSecret = null,
+        fairplayCertificateURI = null,
         drmHttpHeaders = const <String, String>{},
         withCredentials = false,
         super(VideoPlayerValue(duration: Duration.zero));
@@ -254,9 +257,12 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     Future<ClosedCaptionFile>? closedCaptionFile,
     this.videoPlayerOptions,
     this.httpHeaders = const <String, String>{},
-    this.drmType,
-    this.licenseProxyURL,
-    this.proxyURLSigningSecret,
+    /*this.drmType,*/
+    this.widevineLicenseProxyURL,
+    this.widevineProxyURLSigningSecret,
+    this.fairplayLicenseProxyURL,
+    this.fairplayProxyURLSigningSecret,
+    this.fairplayCertificateURI,
     this.drmHttpHeaders = const <String, String>{},
     this.withCredentials = false,
   })  : _closedCaptionFileFuture = closedCaptionFile,
@@ -276,9 +282,12 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         package = null,
         formatHint = null,
         httpHeaders = const <String, String>{},
-        drmType = null,
-        licenseProxyURL = null,
-        proxyURLSigningSecret = null,
+        /*drmType = null,*/
+        widevineLicenseProxyURL = null,
+        widevineProxyURLSigningSecret = null,
+        fairplayLicenseProxyURL = null,
+        fairplayProxyURLSigningSecret = null,
+        fairplayCertificateURI = null,
         drmHttpHeaders = const <String, String>{},
         withCredentials = false,
         super(VideoPlayerValue(duration: Duration.zero));
@@ -297,9 +306,12 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
         package = null,
         formatHint = null,
         httpHeaders = const <String, String>{},
-        drmType = null,
-        licenseProxyURL = null,
-        proxyURLSigningSecret = null,
+        /*drmType = null,*/
+        widevineLicenseProxyURL = null,
+        widevineProxyURLSigningSecret = null,
+        fairplayLicenseProxyURL = null,
+        fairplayProxyURLSigningSecret = null,
+        fairplayCertificateURI = null,
         drmHttpHeaders = const <String, String>{},
         withCredentials = false,
         super(VideoPlayerValue(duration: Duration.zero));
@@ -327,17 +339,17 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
   /// Only set for [asset] videos. The package that the asset was loaded from.
   final String? package;
 
-  /// The DRM protection of the given video.
-  /// Only for [DataSourceType.network] videos.
-  final String? drmType;
-
   /// URL of the DRM protection for the acquisition of the license to play the video.
   /// Only for [DataSourceType.network] videos.
-  String? drmUriLicense;
-  final String? licenseProxyURL;
-  final String? proxyURLSigningSecret;
+  String? widevineDrmUriLicense;
+  String? fairplayDrmUriLicense;
+  final String? widevineLicenseProxyURL;
+  final String? widevineProxyURLSigningSecret;
+  final String? fairplayLicenseProxyURL;
+  final String? fairplayProxyURLSigningSecret;
+  final String? fairplayCertificateURI;
 
-  /// HTTP headers used for the request to the [drmUriLicense].
+  /// HTTP headers used for the request to the [widevineDrmUriLicense / fairplayDrmUriLicense].
   /// Only for [VideoPlayerController.network].
   /// Always empty for other video types.
   final Map<String, String> drmHttpHeaders;
@@ -349,7 +361,9 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
   /// Defaults to `false`.
   final bool withCredentials;
 
-  bool get _hasDrm => drmType != null && drmUriLicense != null;
+  /*bool get _hasDrm => drmType != null && drmUriLicense != null;*/
+  bool get _hasDrmWidevine => widevineDrmUriLicense != null;
+  bool get _hasDrmFairplay => fairplayDrmUriLicense != null;
 
   Future<ClosedCaptionFile>? _closedCaptionFileFuture;
   ClosedCaptionFile? _closedCaptionFile;
@@ -371,10 +385,23 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
 
   /// Attempts to open the given [dataSource] and load metadata about the video.
   Future<void> initialize() async {
-    if (drmType != null &&
-        licenseProxyURL != null &&
-        proxyURLSigningSecret != null) {
-      generateDrmUriLicense(licenseProxyURL!, proxyURLSigningSecret!);
+    if (widevineLicenseProxyURL != null &&
+        widevineProxyURLSigningSecret != null &&
+        fairplayLicenseProxyURL != null &&
+        fairplayProxyURLSigningSecret != null) {
+      // generate for web
+      generateDrmUriLicense(widevineLicenseProxyURL!,
+          widevineProxyURLSigningSecret!, VideoDrmType.widevine);
+      generateDrmUriLicense(fairplayLicenseProxyURL!,
+          fairplayProxyURLSigningSecret!, VideoDrmType.fairplay);
+    } else if (widevineLicenseProxyURL != null &&
+        widevineProxyURLSigningSecret != null) {
+      generateDrmUriLicense(widevineLicenseProxyURL!,
+          widevineProxyURLSigningSecret!, VideoDrmType.widevine);
+    } else if (fairplayLicenseProxyURL != null &&
+        fairplayProxyURLSigningSecret != null) {
+      generateDrmUriLicense(fairplayLicenseProxyURL!,
+          fairplayProxyURLSigningSecret!, VideoDrmType.fairplay);
     }
     final bool allowBackgroundPlayback =
         videoPlayerOptions?.allowBackgroundPlayback ?? false;
@@ -400,13 +427,25 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
           formatHint: formatHint,
           httpHeaders: httpHeaders,
           withCredentials: withCredentials,
-          drmDataSource: _hasDrm
+          drmDataSource: _hasDrmWidevine && _hasDrmFairplay
               ? DrmDataSource(
-                  type: drmType!,
-                  uriLicense: drmUriLicense!,
+                  widevineDrmUriLicense: widevineDrmUriLicense!,
+                  fairplayDrmUriLicense: fairplayDrmUriLicense!,
                   httpHeaders: drmHttpHeaders,
                 )
-              : null,
+              : _hasDrmWidevine
+                  ? DrmDataSource(
+                      widevineDrmUriLicense: widevineDrmUriLicense!,
+                      fairplayDrmUriLicense: "",
+                      httpHeaders: drmHttpHeaders,
+                    )
+                  : _hasDrmFairplay
+                      ? DrmDataSource(
+                          widevineDrmUriLicense: "",
+                          fairplayDrmUriLicense: fairplayDrmUriLicense!,
+                          httpHeaders: drmHttpHeaders,
+                        )
+                      : null,
         );
         break;
       case DataSourceType.file:
@@ -508,8 +547,8 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     super.dispose();
   }
 
-  void generateDrmUriLicense(
-      String licenseProxyURL, String proxyURLSigningSecret) {
+  void generateDrmUriLicense(String licenseProxyURL,
+      String proxyURLSigningSecret, String videoDrmType) {
     List<String> splitPath = dataSource.split('/');
     if (splitPath.isEmpty && splitPath.length < 2) {
       return;
@@ -532,7 +571,11 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
     final signature = hex.encode(sigBytes);
 
     var url = "$proxyUrl?expires=$expires&token=$signature";
-    drmUriLicense = url;
+    if (videoDrmType == VideoDrmType.widevine) {
+      widevineDrmUriLicense = url;
+    } else if (videoDrmType == VideoDrmType.fairplay) {
+      fairplayDrmUriLicense = url;
+    }
     //print("HMAC digest as bytes: ${signature}");
     print("HMAC digest as hex string: $url");
   }

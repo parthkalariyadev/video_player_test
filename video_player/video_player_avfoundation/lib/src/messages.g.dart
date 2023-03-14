@@ -137,7 +137,7 @@ class CreateMessage {
     this.asset,
     this.uri,
     this.drmUrl,
-    this.drmType,
+    /*this.drmType,*/
     this.packageName,
     this.formatHint,
     required this.httpHeaders,
@@ -146,7 +146,7 @@ class CreateMessage {
   String? asset;
   String? uri;
   String? drmUrl;
-  String? drmType;
+  /*String? drmType;*/
   String? packageName;
   String? formatHint;
   Map<String?, String?> httpHeaders;
@@ -156,7 +156,7 @@ class CreateMessage {
     pigeonMap['asset'] = asset;
     pigeonMap['uri'] = uri;
     pigeonMap['drmUrl'] = drmUrl;
-    pigeonMap['drmType'] = drmType;
+    /*pigeonMap['drmType'] = drmType;*/
     pigeonMap['packageName'] = packageName;
     pigeonMap['formatHint'] = formatHint;
     pigeonMap['httpHeaders'] = httpHeaders;
@@ -169,7 +169,7 @@ class CreateMessage {
       asset: pigeonMap['asset'] as String?,
       uri: pigeonMap['uri'] as String?,
       drmUrl: pigeonMap['drmUrl'] as String?,
-      drmType: pigeonMap['drmType'] as String?,
+      /*drmType: pigeonMap['drmType'] as String?,*/
       packageName: pigeonMap['packageName'] as String?,
       formatHint: pigeonMap['formatHint'] as String?,
       httpHeaders: (pigeonMap['httpHeaders'] as Map<Object?, Object?>?)!

@@ -181,18 +181,22 @@ class DrmDataSource {
   ///
   /// The [uriLicense] argument takes the form of `'https://proxy.staging.widevine.com/proxy'`
   DrmDataSource({
-    required this.type,
-    required this.uriLicense,
+    /*required this.type,*/
+    /*required this.uriLicense,*/
+    required this.widevineDrmUriLicense,
+    required this.fairplayDrmUriLicense,
     this.httpHeaders = const <String, String>{},
   });
 
   /// The DRM protection of the given video.
   /// Only for [DataSourceType.network] videos.
-  final String type;
+  /*final String type;*/
 
   /// URL of the DRM protection for the acquisition of the license to play the video.
   /// Only for [DataSourceType.network] videos.
-  final String uriLicense;
+  /*final String uriLicense;*/
+  final String widevineDrmUriLicense;
+  final String fairplayDrmUriLicense;
 
   /// HTTP headers used for the request to the [uriLicense].
   /// Only for [DataSourceType.network] videos.
@@ -373,12 +377,16 @@ class DurationRange {
   }
 
   @override
-  String toString() => '${objectRuntimeType(this, 'DurationRange')}(start: $start, end: $end)';
+  String toString() =>
+      '${objectRuntimeType(this, 'DurationRange')}(start: $start, end: $end)';
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is DurationRange && runtimeType == other.runtimeType && start == other.start && end == other.end;
+      other is DurationRange &&
+          runtimeType == other.runtimeType &&
+          start == other.start &&
+          end == other.end;
 
   @override
   int get hashCode => Object.hash(start, end);
