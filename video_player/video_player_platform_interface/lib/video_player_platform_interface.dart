@@ -185,6 +185,7 @@ class DrmDataSource {
     /*required this.uriLicense,*/
     required this.widevineDrmUriLicense,
     required this.fairplayDrmUriLicense,
+    required this.fairplayCertificateURI,
     this.httpHeaders = const <String, String>{},
   });
 
@@ -197,6 +198,7 @@ class DrmDataSource {
   /*final String uriLicense;*/
   final String widevineDrmUriLicense;
   final String fairplayDrmUriLicense;
+  final String fairplayCertificateURI;
 
   /// HTTP headers used for the request to the [uriLicense].
   /// Only for [DataSourceType.network] videos.

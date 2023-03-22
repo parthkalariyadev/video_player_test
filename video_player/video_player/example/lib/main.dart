@@ -31,16 +31,17 @@ class _VideoAppState extends State<VideoApp> {
       /*'YOUR_VIDEO_URL'*/
       /*'https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'*/
       /*'https://video.gumlet.io/63be5807b03c5ea88609e4d6/63bfe56832156f9174527aa6/main.mpd'*/
-      'https://video.gumlet.io/63be5807b03c5ea88609e4d6/63bfe56832156f9174527aa6/main.m3u8',
+      /*'https://video.gumlet.io/63be5807b03c5ea88609e4d6/63bfe56832156f9174527aa6/main.m3u8'*/
+      'https://video.gumlet.io/63bfe3a732156f9174527768/640d5dbf822a4478d7ad833e/main.m3u8',
       /*drmType: VideoDrmType.widevine,*/
       widevineLicenseProxyURL: /*'YOUR_LICENCE_PROXY_URL'*/
-          "https://widevine.gumlet.com/licence/63b67aa4fd4b762e422a8b3d",
+          "https://widevine.gumlet.com/licence/63bfdecc13de5691688e9f3e",
       widevineProxyURLSigningSecret: /*'YOUR_PROXY_URL_SIGNING_SECRET'*/
-          "87610eee6ee466c66b4866a09c42f7f4",
+          "d5b98024815fd1e2f5ee38b71f47dae8",
       fairplayLicenseProxyURL: /*'YOUR_LICENCE_PROXY_URL'*/
           "https://fairplay.gumlet.com/licence/63bfdecc13de5691688e9f3e",
       fairplayProxyURLSigningSecret: /*'YOUR_PROXY_URL_SIGNING_SECRET'*/
-          "87610eee6ee466c66b4866a09c42f7f4",
+          "d5b98024815fd1e2f5ee38b71f47dae8",
       fairplayCertificateURI:
           "https://fairplay.gumlet.com/certificate/63bfdecc13de5691688e9f3e",
     )..initialize().then((_) {

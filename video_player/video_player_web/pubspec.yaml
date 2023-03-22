@@ -24,6 +24,8 @@ dependencies:
   # use this for local path.
   drm_video_player_platform_interface:
     path: ../video_player_platform_interface
+  device_info_plus: 8.1.0
+  http: 0.13.5
 
   # use this for github path.
 #  drm_video_player_platform_interface:

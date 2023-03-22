@@ -5,6 +5,7 @@ INJECTED from /Volumes/Workspace/FlutterSourceCode/video_player_test/video_playe
 INJECTED from /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/android/app/src/main/AndroidManifest.xml:1:1-23:12
 INJECTED from /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/android/app/src/main/AndroidManifest.xml:1:1-23:12
 MERGED from [:integration_test] /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/build/integration_test/intermediates/merged_manifest/debug/AndroidManifest.xml:7:1-12:12
+MERGED from [:device_info_plus] /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/build/device_info_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:path_provider_android] /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:drm_video_player_android] /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/build/drm_video_player_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.test:rules:1.2.0] /Users/mac-04/.gradle/caches/transforms-3/6228bc3dedd3688056960fe38bff34c4/transformed/rules-1.2.0/AndroidManifest.xml:17:1-24:12
@@ -109,6 +110,8 @@ INJECTED from /Volumes/Workspace/FlutterSourceCode/video_player_test/video_playe
 INJECTED from /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/android/app/src/main/AndroidManifest.xml
 MERGED from [:integration_test] /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/build/integration_test/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-44
 MERGED from [:integration_test] /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/build/integration_test/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-44
+MERGED from [:device_info_plus] /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/build/device_info_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:device_info_plus] /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/build/device_info_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider_android] /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider_android] /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:drm_video_player_android] /Volumes/Workspace/FlutterSourceCode/video_player_test/video_player/video_player/example/build/drm_video_player_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44

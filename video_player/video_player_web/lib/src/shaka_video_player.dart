@@ -7,12 +7,15 @@ import 'dart:html' as html;
 import 'dart:js';
 import 'dart:js_util';
 
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:drm_video_player_platform_interface/video_player_platform_interface.dart';
 import 'package:drm_video_player_web/src/shaka/shaka.dart' as shaka;
 import 'package:drm_video_player_web/src/utils.dart';
 import 'package:drm_video_player_web/src/video_element_player.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
 
 const String _kMuxScriptUrl =
     'https://cdnjs.cloudflare.com/ajax/libs/mux.js/5.10.0/mux.min.js';
@@ -27,6 +30,7 @@ class ShakaVideoPlayer extends VideoElementPlayer {
     /*String? drmUriLicense,*/
     String? widevineDrmUriLicense,
     String? fairplayDrmUriLicense,
+    String? fairplayCertificateURI,
     Map<String, String>? drmHttpHeaders,
     bool withCredentials = false,
     @visibleForTesting StreamController<VideoEvent>? eventController,
@@ -34,6 +38,7 @@ class ShakaVideoPlayer extends VideoElementPlayer {
         /*_drmUriLicense = drmUriLicense,*/
         _widevineDrmUriLicense = widevineDrmUriLicense,
         _fairplayDrmUriLicense = fairplayDrmUriLicense,
+        _fairplayCertificateURI = fairplayCertificateURI,
         _drmHttpHeaders = drmHttpHeaders,
         _withCredentials = withCredentials,
         super(src: src, eventController: eventController);
@@ -44,21 +49,13 @@ class ShakaVideoPlayer extends VideoElementPlayer {
   /*final String? _drmUriLicense;*/
   final String? _widevineDrmUriLicense;
   final String? _fairplayDrmUriLicense;
+  final String? _fairplayCertificateURI;
   final Map<String, String>? _drmHttpHeaders;
   final bool _withCredentials;
 
   /*bool get _hasDrm => _drmType != null && _drmUriLicense != null;*/
   bool get _hasDrmWidevine => _widevineDrmUriLicense != null;
-  bool get _hasDrmFairplay => _fairplayDrmUriLicense != null;
-
-  // TODO: Need to change in this method.
-  String get _drmServer {
-    /*if (_drmType == VideoDrmType.widevine) {*/
-    return 'com.widevine.alpha';
-    /*}
-
-    return _drmType!;*/
-  }
+  bool get _hasDrmFairplay => _fairplayDrmUriLicense != null && _fairplayCertificateURI != null;
 
   @override
   html.VideoElement createElement(int textureId) {
@@ -101,36 +98,89 @@ class ShakaVideoPlayer extends VideoElementPlayer {
     shaka.installPolyfills();
 
     if (shaka.Player.isBrowserSupported()) {
-      _player = shaka.Player(videoElement);
+      DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
+      WebBrowserInfo webBrowserInfo = await deviceInfo.webBrowserInfo;
 
-      setupListeners();
+      if(webBrowserInfo.browserName == BrowserName.safari) {
 
-      try {
-        if (_hasDrmWidevine) {
-          _player.configure(
-            jsify({
-              "drm": {
-                "servers": {_drmServer: _widevineDrmUriLicense!}
-              }
-            }),
-          );
+        _player = shaka.Player(videoElement);
+
+        setupListeners();
+
+        try {
+          if (_hasDrmFairplay) {
+            
+            Response response = await http.get(Uri.parse(_fairplayCertificateURI!));
+            Uint8List uint8List = response.bodyBytes;
+            print(uint8List);
+
+            _player.configure(
+              jsify({
+                "drm": {
+                  "servers": {
+                    "com.apple.fps": _fairplayDrmUriLicense!,
+                    "advanced": {
+                      "com.apple.fps":{
+                        "serverCertificate": uint8List
+                      }
+                    }
+                  }
+                }
+              }),
+            );
+          }
+          _player
+              .getNetworkingEngine()
+              .registerRequestFilter(allowInterop((type, request) {
+            request.allowCrossSiteCredentials = _withCredentials;
+
+            if (type == shaka.RequestType.license &&
+                _hasDrmWidevine &&
+                _drmHttpHeaders?.isNotEmpty == true) {
+              request.headers = jsify(_drmHttpHeaders!);
+            }
+          }));
+
+          await promiseToFuture(_player.load(src));
+        } on shaka.Error catch (ex) {
+          _onShakaPlayerError(ex);
         }
 
-        _player
-            .getNetworkingEngine()
-            .registerRequestFilter(allowInterop((type, request) {
-          request.allowCrossSiteCredentials = _withCredentials;
+      } else {
 
-          if (type == shaka.RequestType.license &&
-              _hasDrmWidevine &&
-              _drmHttpHeaders?.isNotEmpty == true) {
-            request.headers = jsify(_drmHttpHeaders!);
+        _player = shaka.Player(videoElement);
+
+        setupListeners();
+
+        try {
+          if (_hasDrmWidevine) {
+            _player.configure(
+              jsify({
+                "drm": {
+                  "servers": {
+                    "com.widevine.alpha": _widevineDrmUriLicense!
+                  }
+                }
+              }),
+            );
           }
-        }));
 
-        await promiseToFuture(_player.load(src));
-      } on shaka.Error catch (ex) {
-        _onShakaPlayerError(ex);
+          _player
+              .getNetworkingEngine()
+              .registerRequestFilter(allowInterop((type, request) {
+            request.allowCrossSiteCredentials = _withCredentials;
+
+            if (type == shaka.RequestType.license &&
+                _hasDrmWidevine &&
+                _drmHttpHeaders?.isNotEmpty == true) {
+              request.headers = jsify(_drmHttpHeaders!);
+            }
+          }));
+
+          await promiseToFuture(_player.load(src));
+        } on shaka.Error catch (ex) {
+          _onShakaPlayerError(ex);
+        }
       }
     } else {
       throw UnsupportedError(

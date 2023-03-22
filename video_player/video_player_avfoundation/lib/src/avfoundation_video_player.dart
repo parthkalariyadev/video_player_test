@@ -37,6 +37,7 @@ class AVFoundationVideoPlayer extends VideoPlayerPlatform {
     String? uri;
     String? formatHint;
     String? drmUrl;
+    String? drmCertUrl;
     /*String? drmType;*/
     Map<String, String> httpHeaders = <String, String>{};
     switch (dataSource.sourceType) {
@@ -49,6 +50,7 @@ class AVFoundationVideoPlayer extends VideoPlayerPlatform {
         formatHint = _videoFormatStringMap[dataSource.formatHint];
         httpHeaders = dataSource.httpHeaders;
         drmUrl = dataSource.drmDataSource?.fairplayDrmUriLicense;
+        drmCertUrl = dataSource.drmDataSource?.fairplayCertificateURI;
         /*drmType = dataSource.drmDataSource?.type;*/
         break;
       case DataSourceType.file:
@@ -63,6 +65,7 @@ class AVFoundationVideoPlayer extends VideoPlayerPlatform {
       packageName: packageName,
       uri: uri,
       drmUrl: drmUrl,
+      drmCertUrl: drmCertUrl,
       /*drmType: drmType,*/
       httpHeaders: httpHeaders,
       formatHint: formatHint,

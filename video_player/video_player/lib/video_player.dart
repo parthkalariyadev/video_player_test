@@ -363,7 +363,7 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
 
   /*bool get _hasDrm => drmType != null && drmUriLicense != null;*/
   bool get _hasDrmWidevine => widevineDrmUriLicense != null;
-  bool get _hasDrmFairplay => fairplayDrmUriLicense != null;
+  bool get _hasDrmFairplay => fairplayDrmUriLicense != null && fairplayCertificateURI != null;
 
   Future<ClosedCaptionFile>? _closedCaptionFileFuture;
   ClosedCaptionFile? _closedCaptionFile;
@@ -431,18 +431,21 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
               ? DrmDataSource(
                   widevineDrmUriLicense: widevineDrmUriLicense!,
                   fairplayDrmUriLicense: fairplayDrmUriLicense!,
+                  fairplayCertificateURI: fairplayCertificateURI!,
                   httpHeaders: drmHttpHeaders,
                 )
               : _hasDrmWidevine
                   ? DrmDataSource(
                       widevineDrmUriLicense: widevineDrmUriLicense!,
                       fairplayDrmUriLicense: "",
+                      fairplayCertificateURI: "",
                       httpHeaders: drmHttpHeaders,
                     )
                   : _hasDrmFairplay
                       ? DrmDataSource(
                           widevineDrmUriLicense: "",
                           fairplayDrmUriLicense: fairplayDrmUriLicense!,
+                          fairplayCertificateURI: fairplayCertificateURI!,
                           httpHeaders: drmHttpHeaders,
                         )
                       : null,

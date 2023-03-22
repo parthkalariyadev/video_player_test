@@ -79,6 +79,7 @@ class VideoPlayerPlugin extends VideoPlayerPlatform {
       /*drmUriLicense: dataSource.drmDataSource?.uriLicense,*/
       widevineDrmUriLicense: dataSource.drmDataSource?.widevineDrmUriLicense,
       fairplayDrmUriLicense: dataSource.drmDataSource?.fairplayDrmUriLicense,
+      fairplayCertificateURI: dataSource.drmDataSource?.fairplayCertificateURI,
       drmHttpHeaders: dataSource.drmDataSource?.httpHeaders,
       withCredentials: dataSource.withCredentials,
     );

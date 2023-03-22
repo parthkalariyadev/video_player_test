@@ -137,6 +137,7 @@ class CreateMessage {
     this.asset,
     this.uri,
     this.drmUrl,
+    this.drmCertUrl,
     /*this.drmType,*/
     this.packageName,
     this.formatHint,
@@ -146,6 +147,7 @@ class CreateMessage {
   String? asset;
   String? uri;
   String? drmUrl;
+  String? drmCertUrl;
   /*String? drmType;*/
   String? packageName;
   String? formatHint;
@@ -156,6 +158,7 @@ class CreateMessage {
     pigeonMap['asset'] = asset;
     pigeonMap['uri'] = uri;
     pigeonMap['drmUrl'] = drmUrl;
+    pigeonMap['drmCertUrl'] = drmCertUrl;
     /*pigeonMap['drmType'] = drmType;*/
     pigeonMap['packageName'] = packageName;
     pigeonMap['formatHint'] = formatHint;
@@ -169,6 +172,7 @@ class CreateMessage {
       asset: pigeonMap['asset'] as String?,
       uri: pigeonMap['uri'] as String?,
       drmUrl: pigeonMap['drmUrl'] as String?,
+      drmCertUrl: pigeonMap['drmCertUrl'] as String?,
       /*drmType: pigeonMap['drmType'] as String?,*/
       packageName: pigeonMap['packageName'] as String?,
       formatHint: pigeonMap['formatHint'] as String?,
